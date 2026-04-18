@@ -1,0 +1,1201 @@
+date,antibiotic_name,region,pharmacy_id,units_sold,month
+2024-01-01,Amoxicillin,Karnataka,PH001,142,1
+2024-01-01,Azithromycin,Maharashtra,PH001,70,1
+2024-01-01,Ciprofloxacin,Karnataka,PH001,124,1
+2024-01-01,Metronidazole,Kerala,PH001,149,1
+2024-01-01,Doxycycline,Karnataka,PH001,199,1
+2024-01-01,Amoxicillin,Maharashtra,PH002,1076,1
+2024-01-01,Azithromycin,Kerala,PH002,107,1
+2024-01-01,Ciprofloxacin,Maharashtra,PH002,138,1
+2024-01-01,Metronidazole,Karnataka,PH002,64,1
+2024-01-01,Doxycycline,Karnataka,PH002,100,1
+2024-01-01,Amoxicillin,Maharashtra,PH003,113,1
+2024-01-01,Azithromycin,Kerala,PH003,100,1
+2024-01-01,Ciprofloxacin,Kerala,PH003,67,1
+2024-01-01,Metronidazole,Maharashtra,PH003,63,1
+2024-01-01,Doxycycline,Kerala,PH003,139,1
+2024-01-01,Amoxicillin,Maharashtra,PH004,141,1
+2024-01-01,Azithromycin,Karnataka,PH004,1005,1
+2024-01-01,Ciprofloxacin,Kerala,PH004,99,1
+2024-01-01,Metronidazole,Tamil Nadu,PH004,183,1
+2024-01-01,Doxycycline,Maharashtra,PH004,1201,1
+2024-01-01,Amoxicillin,Tamil Nadu,PH005,93,1
+2024-01-01,Azithromycin,Tamil Nadu,PH005,63,1
+2024-01-01,Ciprofloxacin,Karnataka,PH005,89,1
+2024-01-01,Metronidazole,Kerala,PH005,131,1
+2024-01-01,Doxycycline,Maharashtra,PH005,173,1
+2024-01-01,Amoxicillin,Kerala,PH006,64,1
+2024-01-01,Azithromycin,Kerala,PH006,120,1
+2024-01-01,Ciprofloxacin,Kerala,PH006,938,1
+2024-01-01,Metronidazole,Karnataka,PH006,130,1
+2024-01-01,Doxycycline,Karnataka,PH006,82,1
+2024-01-01,Amoxicillin,Tamil Nadu,PH007,90,1
+2024-01-01,Azithromycin,Kerala,PH007,121,1
+2024-01-01,Ciprofloxacin,Kerala,PH007,97,1
+2024-01-01,Metronidazole,Tamil Nadu,PH007,86,1
+2024-01-01,Doxycycline,Maharashtra,PH007,84,1
+2024-01-01,Amoxicillin,Kerala,PH008,180,1
+2024-01-01,Azithromycin,Tamil Nadu,PH008,191,1
+2024-01-01,Ciprofloxacin,Kerala,PH008,64,1
+2024-01-01,Metronidazole,Maharashtra,PH008,112,1
+2024-01-01,Doxycycline,Kerala,PH008,101,1
+2024-01-01,Amoxicillin,Maharashtra,PH009,192,1
+2024-01-01,Azithromycin,Maharashtra,PH009,62,1
+2024-01-01,Ciprofloxacin,Karnataka,PH009,135,1
+2024-01-01,Metronidazole,Tamil Nadu,PH009,94,1
+2024-01-01,Doxycycline,Kerala,PH009,183,1
+2024-01-01,Amoxicillin,Maharashtra,PH010,93,1
+2024-01-01,Azithromycin,Tamil Nadu,PH010,124,1
+2024-01-01,Ciprofloxacin,Karnataka,PH010,141,1
+2024-01-01,Metronidazole,Tamil Nadu,PH010,178,1
+2024-01-01,Doxycycline,Tamil Nadu,PH010,170,1
+2024-01-01,Amoxicillin,Kerala,PH011,1255,1
+2024-01-01,Azithromycin,Karnataka,PH011,186,1
+2024-01-01,Ciprofloxacin,Kerala,PH011,100,1
+2024-01-01,Metronidazole,Maharashtra,PH011,108,1
+2024-01-01,Doxycycline,Maharashtra,PH011,162,1
+2024-01-01,Amoxicillin,Tamil Nadu,PH012,101,1
+2024-01-01,Azithromycin,Karnataka,PH012,179,1
+2024-01-01,Ciprofloxacin,Kerala,PH012,162,1
+2024-01-01,Metronidazole,Karnataka,PH012,162,1
+2024-01-01,Doxycycline,Maharashtra,PH012,1024,1
+2024-01-01,Amoxicillin,Kerala,PH013,196,1
+2024-01-01,Azithromycin,Kerala,PH013,117,1
+2024-01-01,Ciprofloxacin,Maharashtra,PH013,172,1
+2024-01-01,Metronidazole,Tamil Nadu,PH013,73,1
+2024-01-01,Doxycycline,Tamil Nadu,PH013,188,1
+2024-01-01,Amoxicillin,Maharashtra,PH014,146,1
+2024-01-01,Azithromycin,Karnataka,PH014,119,1
+2024-01-01,Ciprofloxacin,Karnataka,PH014,197,1
+2024-01-01,Metronidazole,Maharashtra,PH014,196,1
+2024-01-01,Doxycycline,Karnataka,PH014,196,1
+2024-01-01,Amoxicillin,Karnataka,PH015,101,1
+2024-01-01,Azithromycin,Maharashtra,PH015,177,1
+2024-01-01,Ciprofloxacin,Maharashtra,PH015,178,1
+2024-01-01,Metronidazole,Kerala,PH015,91,1
+2024-01-01,Doxycycline,Maharashtra,PH015,193,1
+2024-01-01,Amoxicillin,Kerala,PH016,109,1
+2024-01-01,Azithromycin,Kerala,PH016,97,1
+2024-01-01,Ciprofloxacin,Kerala,PH016,86,1
+2024-01-01,Metronidazole,Karnataka,PH016,58,1
+2024-01-01,Doxycycline,Karnataka,PH016,97,1
+2024-01-01,Amoxicillin,Maharashtra,PH017,103,1
+2024-01-01,Azithromycin,Maharashtra,PH017,165,1
+2024-01-01,Ciprofloxacin,Maharashtra,PH017,153,1
+2024-01-01,Metronidazole,Karnataka,PH017,161,1
+2024-01-01,Doxycycline,Karnataka,PH017,142,1
+2024-01-01,Amoxicillin,Tamil Nadu,PH018,131,1
+2024-01-01,Azithromycin,Karnataka,PH018,117,1
+2024-01-01,Ciprofloxacin,Kerala,PH018,97,1
+2024-01-01,Metronidazole,Maharashtra,PH018,185,1
+2024-01-01,Doxycycline,Kerala,PH018,177,1
+2024-01-01,Amoxicillin,Maharashtra,PH019,164,1
+2024-01-01,Azithromycin,Tamil Nadu,PH019,87,1
+2024-01-01,Ciprofloxacin,Karnataka,PH019,57,1
+2024-01-01,Metronidazole,Tamil Nadu,PH019,70,1
+2024-01-01,Doxycycline,Maharashtra,PH019,160,1
+2024-01-01,Amoxicillin,Kerala,PH020,110,1
+2024-01-01,Azithromycin,Maharashtra,PH020,84,1
+2024-01-01,Ciprofloxacin,Maharashtra,PH020,66,1
+2024-01-01,Metronidazole,Tamil Nadu,PH020,95,1
+2024-01-01,Doxycycline,Karnataka,PH020,1079,1
+2024-02-01,Amoxicillin,Kerala,PH001,95,2
+2024-02-01,Azithromycin,Karnataka,PH001,165,2
+2024-02-01,Ciprofloxacin,Kerala,PH001,116,2
+2024-02-01,Metronidazole,Kerala,PH001,103,2
+2024-02-01,Doxycycline,Maharashtra,PH001,73,2
+2024-02-01,Amoxicillin,Karnataka,PH002,135,2
+2024-02-01,Azithromycin,Karnataka,PH002,179,2
+2024-02-01,Ciprofloxacin,Maharashtra,PH002,186,2
+2024-02-01,Metronidazole,Maharashtra,PH002,88,2
+2024-02-01,Doxycycline,Karnataka,PH002,75,2
+2024-02-01,Amoxicillin,Kerala,PH003,62,2
+2024-02-01,Azithromycin,Karnataka,PH003,106,2
+2024-02-01,Ciprofloxacin,Maharashtra,PH003,114,2
+2024-02-01,Metronidazole,Tamil Nadu,PH003,193,2
+2024-02-01,Doxycycline,Karnataka,PH003,192,2
+2024-02-01,Amoxicillin,Tamil Nadu,PH004,81,2
+2024-02-01,Azithromycin,Tamil Nadu,PH004,100,2
+2024-02-01,Ciprofloxacin,Karnataka,PH004,174,2
+2024-02-01,Metronidazole,Tamil Nadu,PH004,135,2
+2024-02-01,Doxycycline,Tamil Nadu,PH004,119,2
+2024-02-01,Amoxicillin,Karnataka,PH005,150,2
+2024-02-01,Azithromycin,Kerala,PH005,109,2
+2024-02-01,Ciprofloxacin,Kerala,PH005,152,2
+2024-02-01,Metronidazole,Kerala,PH005,165,2
+2024-02-01,Doxycycline,Karnataka,PH005,104,2
+2024-02-01,Amoxicillin,Maharashtra,PH006,62,2
+2024-02-01,Azithromycin,Tamil Nadu,PH006,196,2
+2024-02-01,Ciprofloxacin,Karnataka,PH006,68,2
+2024-02-01,Metronidazole,Karnataka,PH006,916,2
+2024-02-01,Doxycycline,Tamil Nadu,PH006,72,2
+2024-02-01,Amoxicillin,Maharashtra,PH007,178,2
+2024-02-01,Azithromycin,Kerala,PH007,83,2
+2024-02-01,Ciprofloxacin,Tamil Nadu,PH007,97,2
+2024-02-01,Metronidazole,Kerala,PH007,166,2
+2024-02-01,Doxycycline,Kerala,PH007,118,2
+2024-02-01,Amoxicillin,Karnataka,PH008,125,2
+2024-02-01,Azithromycin,Karnataka,PH008,1019,2
+2024-02-01,Ciprofloxacin,Kerala,PH008,1252,2
+2024-02-01,Metronidazole,Maharashtra,PH008,193,2
+2024-02-01,Doxycycline,Maharashtra,PH008,134,2
+2024-02-01,Amoxicillin,Kerala,PH009,150,2
+2024-02-01,Azithromycin,Tamil Nadu,PH009,118,2
+2024-02-01,Ciprofloxacin,Maharashtra,PH009,187,2
+2024-02-01,Metronidazole,Tamil Nadu,PH009,145,2
+2024-02-01,Doxycycline,Kerala,PH009,53,2
+2024-02-01,Amoxicillin,Maharashtra,PH010,959,2
+2024-02-01,Azithromycin,Karnataka,PH010,133,2
+2024-02-01,Ciprofloxacin,Tamil Nadu,PH010,173,2
+2024-02-01,Metronidazole,Kerala,PH010,150,2
+2024-02-01,Doxycycline,Kerala,PH010,123,2
+2024-02-01,Amoxicillin,Kerala,PH011,190,2
+2024-02-01,Azithromycin,Tamil Nadu,PH011,834,2
+2024-02-01,Ciprofloxacin,Karnataka,PH011,130,2
+2024-02-01,Metronidazole,Kerala,PH011,139,2
+2024-02-01,Doxycycline,Karnataka,PH011,154,2
+2024-02-01,Amoxicillin,Tamil Nadu,PH012,163,2
+2024-02-01,Azithromycin,Kerala,PH012,169,2
+2024-02-01,Ciprofloxacin,Kerala,PH012,187,2
+2024-02-01,Metronidazole,Maharashtra,PH012,148,2
+2024-02-01,Doxycycline,Tamil Nadu,PH012,145,2
+2024-02-01,Amoxicillin,Tamil Nadu,PH013,86,2
+2024-02-01,Azithromycin,Karnataka,PH013,62,2
+2024-02-01,Ciprofloxacin,Karnataka,PH013,154,2
+2024-02-01,Metronidazole,Kerala,PH013,111,2
+2024-02-01,Doxycycline,Kerala,PH013,135,2
+2024-02-01,Amoxicillin,Karnataka,PH014,1032,2
+2024-02-01,Azithromycin,Karnataka,PH014,125,2
+2024-02-01,Ciprofloxacin,Maharashtra,PH014,177,2
+2024-02-01,Metronidazole,Tamil Nadu,PH014,160,2
+2024-02-01,Doxycycline,Kerala,PH014,148,2
+2024-02-01,Amoxicillin,Maharashtra,PH015,172,2
+2024-02-01,Azithromycin,Kerala,PH015,193,2
+2024-02-01,Ciprofloxacin,Kerala,PH015,91,2
+2024-02-01,Metronidazole,Tamil Nadu,PH015,171,2
+2024-02-01,Doxycycline,Karnataka,PH015,124,2
+2024-02-01,Amoxicillin,Maharashtra,PH016,58,2
+2024-02-01,Azithromycin,Maharashtra,PH016,194,2
+2024-02-01,Ciprofloxacin,Karnataka,PH016,190,2
+2024-02-01,Metronidazole,Kerala,PH016,76,2
+2024-02-01,Doxycycline,Kerala,PH016,78,2
+2024-02-01,Amoxicillin,Karnataka,PH017,185,2
+2024-02-01,Azithromycin,Kerala,PH017,135,2
+2024-02-01,Ciprofloxacin,Karnataka,PH017,120,2
+2024-02-01,Metronidazole,Maharashtra,PH017,85,2
+2024-02-01,Doxycycline,Karnataka,PH017,68,2
+2024-02-01,Amoxicillin,Tamil Nadu,PH018,140,2
+2024-02-01,Azithromycin,Karnataka,PH018,88,2
+2024-02-01,Ciprofloxacin,Kerala,PH018,190,2
+2024-02-01,Metronidazole,Tamil Nadu,PH018,107,2
+2024-02-01,Doxycycline,Maharashtra,PH018,110,2
+2024-02-01,Amoxicillin,Karnataka,PH019,50,2
+2024-02-01,Azithromycin,Maharashtra,PH019,162,2
+2024-02-01,Ciprofloxacin,Kerala,PH019,166,2
+2024-02-01,Metronidazole,Maharashtra,PH019,110,2
+2024-02-01,Doxycycline,Maharashtra,PH019,167,2
+2024-02-01,Amoxicillin,Maharashtra,PH020,196,2
+2024-02-01,Azithromycin,Tamil Nadu,PH020,96,2
+2024-02-01,Ciprofloxacin,Tamil Nadu,PH020,192,2
+2024-02-01,Metronidazole,Kerala,PH020,103,2
+2024-02-01,Doxycycline,Maharashtra,PH020,61,2
+2024-03-01,Amoxicillin,Maharashtra,PH001,151,3
+2024-03-01,Azithromycin,Maharashtra,PH001,166,3
+2024-03-01,Ciprofloxacin,Maharashtra,PH001,139,3
+2024-03-01,Metronidazole,Maharashtra,PH001,77,3
+2024-03-01,Doxycycline,Kerala,PH001,194,3
+2024-03-01,Amoxicillin,Kerala,PH002,190,3
+2024-03-01,Azithromycin,Kerala,PH002,183,3
+2024-03-01,Ciprofloxacin,Maharashtra,PH002,96,3
+2024-03-01,Metronidazole,Tamil Nadu,PH002,105,3
+2024-03-01,Doxycycline,Karnataka,PH002,158,3
+2024-03-01,Amoxicillin,Maharashtra,PH003,82,3
+2024-03-01,Azithromycin,Tamil Nadu,PH003,60,3
+2024-03-01,Ciprofloxacin,Karnataka,PH003,135,3
+2024-03-01,Metronidazole,Kerala,PH003,1310,3
+2024-03-01,Doxycycline,Kerala,PH003,198,3
+2024-03-01,Amoxicillin,Tamil Nadu,PH004,144,3
+2024-03-01,Azithromycin,Karnataka,PH004,72,3
+2024-03-01,Ciprofloxacin,Kerala,PH004,132,3
+2024-03-01,Metronidazole,Tamil Nadu,PH004,159,3
+2024-03-01,Doxycycline,Kerala,PH004,53,3
+2024-03-01,Amoxicillin,Kerala,PH005,894,3
+2024-03-01,Azithromycin,Maharashtra,PH005,88,3
+2024-03-01,Ciprofloxacin,Tamil Nadu,PH005,167,3
+2024-03-01,Metronidazole,Tamil Nadu,PH005,61,3
+2024-03-01,Doxycycline,Maharashtra,PH005,182,3
+2024-03-01,Amoxicillin,Karnataka,PH006,106,3
+2024-03-01,Azithromycin,Karnataka,PH006,96,3
+2024-03-01,Ciprofloxacin,Kerala,PH006,134,3
+2024-03-01,Metronidazole,Karnataka,PH006,152,3
+2024-03-01,Doxycycline,Maharashtra,PH006,87,3
+2024-03-01,Amoxicillin,Tamil Nadu,PH007,79,3
+2024-03-01,Azithromycin,Karnataka,PH007,101,3
+2024-03-01,Ciprofloxacin,Kerala,PH007,128,3
+2024-03-01,Metronidazole,Karnataka,PH007,155,3
+2024-03-01,Doxycycline,Kerala,PH007,78,3
+2024-03-01,Amoxicillin,Maharashtra,PH008,194,3
+2024-03-01,Azithromycin,Maharashtra,PH008,133,3
+2024-03-01,Ciprofloxacin,Tamil Nadu,PH008,55,3
+2024-03-01,Metronidazole,Kerala,PH008,175,3
+2024-03-01,Doxycycline,Maharashtra,PH008,164,3
+2024-03-01,Amoxicillin,Karnataka,PH009,129,3
+2024-03-01,Azithromycin,Tamil Nadu,PH009,193,3
+2024-03-01,Ciprofloxacin,Maharashtra,PH009,181,3
+2024-03-01,Metronidazole,Karnataka,PH009,145,3
+2024-03-01,Doxycycline,Kerala,PH009,110,3
+2024-03-01,Amoxicillin,Karnataka,PH010,70,3
+2024-03-01,Azithromycin,Maharashtra,PH010,1312,3
+2024-03-01,Ciprofloxacin,Kerala,PH010,61,3
+2024-03-01,Metronidazole,Tamil Nadu,PH010,127,3
+2024-03-01,Doxycycline,Karnataka,PH010,122,3
+2024-03-01,Amoxicillin,Karnataka,PH011,170,3
+2024-03-01,Azithromycin,Maharashtra,PH011,143,3
+2024-03-01,Ciprofloxacin,Maharashtra,PH011,1056,3
+2024-03-01,Metronidazole,Maharashtra,PH011,162,3
+2024-03-01,Doxycycline,Maharashtra,PH011,96,3
+2024-03-01,Amoxicillin,Tamil Nadu,PH012,63,3
+2024-03-01,Azithromycin,Karnataka,PH012,127,3
+2024-03-01,Ciprofloxacin,Kerala,PH012,63,3
+2024-03-01,Metronidazole,Karnataka,PH012,56,3
+2024-03-01,Doxycycline,Karnataka,PH012,156,3
+2024-03-01,Amoxicillin,Kerala,PH013,67,3
+2024-03-01,Azithromycin,Karnataka,PH013,164,3
+2024-03-01,Ciprofloxacin,Kerala,PH013,168,3
+2024-03-01,Metronidazole,Tamil Nadu,PH013,88,3
+2024-03-01,Doxycycline,Karnataka,PH013,135,3
+2024-03-01,Amoxicillin,Maharashtra,PH014,74,3
+2024-03-01,Azithromycin,Maharashtra,PH014,74,3
+2024-03-01,Ciprofloxacin,Karnataka,PH014,158,3
+2024-03-01,Metronidazole,Maharashtra,PH014,160,3
+2024-03-01,Doxycycline,Karnataka,PH014,57,3
+2024-03-01,Amoxicillin,Maharashtra,PH015,132,3
+2024-03-01,Azithromycin,Kerala,PH015,55,3
+2024-03-01,Ciprofloxacin,Maharashtra,PH015,108,3
+2024-03-01,Metronidazole,Kerala,PH015,170,3
+2024-03-01,Doxycycline,Tamil Nadu,PH015,70,3
+2024-03-01,Amoxicillin,Karnataka,PH016,161,3
+2024-03-01,Azithromycin,Karnataka,PH016,111,3
+2024-03-01,Ciprofloxacin,Maharashtra,PH016,104,3
+2024-03-01,Metronidazole,Karnataka,PH016,80,3
+2024-03-01,Doxycycline,Maharashtra,PH016,55,3
+2024-03-01,Amoxicillin,Maharashtra,PH017,124,3
+2024-03-01,Azithromycin,Tamil Nadu,PH017,167,3
+2024-03-01,Ciprofloxacin,Maharashtra,PH017,111,3
+2024-03-01,Metronidazole,Karnataka,PH017,185,3
+2024-03-01,Doxycycline,Kerala,PH017,93,3
+2024-03-01,Amoxicillin,Tamil Nadu,PH018,167,3
+2024-03-01,Azithromycin,Maharashtra,PH018,69,3
+2024-03-01,Ciprofloxacin,Karnataka,PH018,50,3
+2024-03-01,Metronidazole,Maharashtra,PH018,87,3
+2024-03-01,Doxycycline,Karnataka,PH018,149,3
+2024-03-01,Amoxicillin,Karnataka,PH019,183,3
+2024-03-01,Azithromycin,Tamil Nadu,PH019,54,3
+2024-03-01,Ciprofloxacin,Maharashtra,PH019,179,3
+2024-03-01,Metronidazole,Tamil Nadu,PH019,133,3
+2024-03-01,Doxycycline,Kerala,PH019,122,3
+2024-03-01,Amoxicillin,Karnataka,PH020,192,3
+2024-03-01,Azithromycin,Karnataka,PH020,143,3
+2024-03-01,Ciprofloxacin,Kerala,PH020,111,3
+2024-03-01,Metronidazole,Tamil Nadu,PH020,127,3
+2024-03-01,Doxycycline,Karnataka,PH020,186,3
+2024-04-01,Amoxicillin,Karnataka,PH001,84,4
+2024-04-01,Azithromycin,Maharashtra,PH001,1148,4
+2024-04-01,Ciprofloxacin,Maharashtra,PH001,60,4
+2024-04-01,Metronidazole,Tamil Nadu,PH001,109,4
+2024-04-01,Doxycycline,Kerala,PH001,54,4
+2024-04-01,Amoxicillin,Tamil Nadu,PH002,111,4
+2024-04-01,Azithromycin,Kerala,PH002,91,4
+2024-04-01,Ciprofloxacin,Maharashtra,PH002,121,4
+2024-04-01,Metronidazole,Tamil Nadu,PH002,81,4
+2024-04-01,Doxycycline,Tamil Nadu,PH002,146,4
+2024-04-01,Amoxicillin,Karnataka,PH003,194,4
+2024-04-01,Azithromycin,Karnataka,PH003,102,4
+2024-04-01,Ciprofloxacin,Karnataka,PH003,88,4
+2024-04-01,Metronidazole,Tamil Nadu,PH003,116,4
+2024-04-01,Doxycycline,Maharashtra,PH003,91,4
+2024-04-01,Amoxicillin,Karnataka,PH004,160,4
+2024-04-01,Azithromycin,Maharashtra,PH004,87,4
+2024-04-01,Ciprofloxacin,Kerala,PH004,1397,4
+2024-04-01,Metronidazole,Tamil Nadu,PH004,59,4
+2024-04-01,Doxycycline,Tamil Nadu,PH004,146,4
+2024-04-01,Amoxicillin,Kerala,PH005,96,4
+2024-04-01,Azithromycin,Maharashtra,PH005,64,4
+2024-04-01,Ciprofloxacin,Kerala,PH005,96,4
+2024-04-01,Metronidazole,Kerala,PH005,1426,4
+2024-04-01,Doxycycline,Karnataka,PH005,85,4
+2024-04-01,Amoxicillin,Karnataka,PH006,118,4
+2024-04-01,Azithromycin,Tamil Nadu,PH006,123,4
+2024-04-01,Ciprofloxacin,Tamil Nadu,PH006,72,4
+2024-04-01,Metronidazole,Tamil Nadu,PH006,156,4
+2024-04-01,Doxycycline,Kerala,PH006,153,4
+2024-04-01,Amoxicillin,Kerala,PH007,160,4
+2024-04-01,Azithromycin,Karnataka,PH007,149,4
+2024-04-01,Ciprofloxacin,Kerala,PH007,926,4
+2024-04-01,Metronidazole,Tamil Nadu,PH007,141,4
+2024-04-01,Doxycycline,Kerala,PH007,100,4
+2024-04-01,Amoxicillin,Maharashtra,PH008,90,4
+2024-04-01,Azithromycin,Karnataka,PH008,50,4
+2024-04-01,Ciprofloxacin,Kerala,PH008,139,4
+2024-04-01,Metronidazole,Tamil Nadu,PH008,106,4
+2024-04-01,Doxycycline,Tamil Nadu,PH008,104,4
+2024-04-01,Amoxicillin,Karnataka,PH009,198,4
+2024-04-01,Azithromycin,Kerala,PH009,186,4
+2024-04-01,Ciprofloxacin,Kerala,PH009,166,4
+2024-04-01,Metronidazole,Karnataka,PH009,112,4
+2024-04-01,Doxycycline,Tamil Nadu,PH009,124,4
+2024-04-01,Amoxicillin,Karnataka,PH010,140,4
+2024-04-01,Azithromycin,Karnataka,PH010,157,4
+2024-04-01,Ciprofloxacin,Tamil Nadu,PH010,74,4
+2024-04-01,Metronidazole,Tamil Nadu,PH010,137,4
+2024-04-01,Doxycycline,Kerala,PH010,112,4
+2024-04-01,Amoxicillin,Tamil Nadu,PH011,163,4
+2024-04-01,Azithromycin,Karnataka,PH011,130,4
+2024-04-01,Ciprofloxacin,Kerala,PH011,197,4
+2024-04-01,Metronidazole,Maharashtra,PH011,112,4
+2024-04-01,Doxycycline,Kerala,PH011,120,4
+2024-04-01,Amoxicillin,Kerala,PH012,172,4
+2024-04-01,Azithromycin,Tamil Nadu,PH012,81,4
+2024-04-01,Ciprofloxacin,Kerala,PH012,79,4
+2024-04-01,Metronidazole,Karnataka,PH012,67,4
+2024-04-01,Doxycycline,Karnataka,PH012,162,4
+2024-04-01,Amoxicillin,Tamil Nadu,PH013,112,4
+2024-04-01,Azithromycin,Maharashtra,PH013,104,4
+2024-04-01,Ciprofloxacin,Maharashtra,PH013,59,4
+2024-04-01,Metronidazole,Tamil Nadu,PH013,173,4
+2024-04-01,Doxycycline,Karnataka,PH013,81,4
+2024-04-01,Amoxicillin,Kerala,PH014,1242,4
+2024-04-01,Azithromycin,Karnataka,PH014,121,4
+2024-04-01,Ciprofloxacin,Karnataka,PH014,116,4
+2024-04-01,Metronidazole,Maharashtra,PH014,57,4
+2024-04-01,Doxycycline,Maharashtra,PH014,137,4
+2024-04-01,Amoxicillin,Maharashtra,PH015,95,4
+2024-04-01,Azithromycin,Maharashtra,PH015,191,4
+2024-04-01,Ciprofloxacin,Maharashtra,PH015,56,4
+2024-04-01,Metronidazole,Kerala,PH015,1180,4
+2024-04-01,Doxycycline,Karnataka,PH015,85,4
+2024-04-01,Amoxicillin,Tamil Nadu,PH016,51,4
+2024-04-01,Azithromycin,Kerala,PH016,197,4
+2024-04-01,Ciprofloxacin,Karnataka,PH016,179,4
+2024-04-01,Metronidazole,Karnataka,PH016,189,4
+2024-04-01,Doxycycline,Kerala,PH016,186,4
+2024-04-01,Amoxicillin,Maharashtra,PH017,148,4
+2024-04-01,Azithromycin,Tamil Nadu,PH017,157,4
+2024-04-01,Ciprofloxacin,Tamil Nadu,PH017,169,4
+2024-04-01,Metronidazole,Karnataka,PH017,177,4
+2024-04-01,Doxycycline,Tamil Nadu,PH017,164,4
+2024-04-01,Amoxicillin,Kerala,PH018,89,4
+2024-04-01,Azithromycin,Kerala,PH018,152,4
+2024-04-01,Ciprofloxacin,Tamil Nadu,PH018,53,4
+2024-04-01,Metronidazole,Kerala,PH018,158,4
+2024-04-01,Doxycycline,Kerala,PH018,124,4
+2024-04-01,Amoxicillin,Maharashtra,PH019,134,4
+2024-04-01,Azithromycin,Kerala,PH019,83,4
+2024-04-01,Ciprofloxacin,Kerala,PH019,171,4
+2024-04-01,Metronidazole,Kerala,PH019,155,4
+2024-04-01,Doxycycline,Karnataka,PH019,106,4
+2024-04-01,Amoxicillin,Karnataka,PH020,147,4
+2024-04-01,Azithromycin,Kerala,PH020,102,4
+2024-04-01,Ciprofloxacin,Kerala,PH020,194,4
+2024-04-01,Metronidazole,Maharashtra,PH020,171,4
+2024-04-01,Doxycycline,Tamil Nadu,PH020,103,4
+2024-05-01,Amoxicillin,Karnataka,PH001,85,5
+2024-05-01,Azithromycin,Kerala,PH001,198,5
+2024-05-01,Ciprofloxacin,Karnataka,PH001,162,5
+2024-05-01,Metronidazole,Maharashtra,PH001,103,5
+2024-05-01,Doxycycline,Karnataka,PH001,199,5
+2024-05-01,Amoxicillin,Kerala,PH002,85,5
+2024-05-01,Azithromycin,Karnataka,PH002,130,5
+2024-05-01,Ciprofloxacin,Kerala,PH002,122,5
+2024-05-01,Metronidazole,Kerala,PH002,178,5
+2024-05-01,Doxycycline,Karnataka,PH002,153,5
+2024-05-01,Amoxicillin,Karnataka,PH003,84,5
+2024-05-01,Azithromycin,Kerala,PH003,157,5
+2024-05-01,Ciprofloxacin,Tamil Nadu,PH003,151,5
+2024-05-01,Metronidazole,Karnataka,PH003,150,5
+2024-05-01,Doxycycline,Karnataka,PH003,98,5
+2024-05-01,Amoxicillin,Tamil Nadu,PH004,106,5
+2024-05-01,Azithromycin,Karnataka,PH004,61,5
+2024-05-01,Ciprofloxacin,Maharashtra,PH004,132,5
+2024-05-01,Metronidazole,Kerala,PH004,130,5
+2024-05-01,Doxycycline,Tamil Nadu,PH004,74,5
+2024-05-01,Amoxicillin,Maharashtra,PH005,192,5
+2024-05-01,Azithromycin,Kerala,PH005,158,5
+2024-05-01,Ciprofloxacin,Maharashtra,PH005,59,5
+2024-05-01,Metronidazole,Kerala,PH005,75,5
+2024-05-01,Doxycycline,Tamil Nadu,PH005,1428,5
+2024-05-01,Amoxicillin,Karnataka,PH006,186,5
+2024-05-01,Azithromycin,Maharashtra,PH006,108,5
+2024-05-01,Ciprofloxacin,Tamil Nadu,PH006,165,5
+2024-05-01,Metronidazole,Tamil Nadu,PH006,958,5
+2024-05-01,Doxycycline,Maharashtra,PH006,157,5
+2024-05-01,Amoxicillin,Tamil Nadu,PH007,180,5
+2024-05-01,Azithromycin,Maharashtra,PH007,157,5
+2024-05-01,Ciprofloxacin,Maharashtra,PH007,53,5
+2024-05-01,Metronidazole,Kerala,PH007,190,5
+2024-05-01,Doxycycline,Maharashtra,PH007,157,5
+2024-05-01,Amoxicillin,Karnataka,PH008,940,5
+2024-05-01,Azithromycin,Tamil Nadu,PH008,145,5
+2024-05-01,Ciprofloxacin,Karnataka,PH008,95,5
+2024-05-01,Metronidazole,Tamil Nadu,PH008,111,5
+2024-05-01,Doxycycline,Kerala,PH008,65,5
+2024-05-01,Amoxicillin,Karnataka,PH009,170,5
+2024-05-01,Azithromycin,Kerala,PH009,152,5
+2024-05-01,Ciprofloxacin,Kerala,PH009,52,5
+2024-05-01,Metronidazole,Maharashtra,PH009,117,5
+2024-05-01,Doxycycline,Kerala,PH009,122,5
+2024-05-01,Amoxicillin,Kerala,PH010,137,5
+2024-05-01,Azithromycin,Karnataka,PH010,86,5
+2024-05-01,Ciprofloxacin,Karnataka,PH010,173,5
+2024-05-01,Metronidazole,Maharashtra,PH010,112,5
+2024-05-01,Doxycycline,Karnataka,PH010,111,5
+2024-05-01,Amoxicillin,Kerala,PH011,101,5
+2024-05-01,Azithromycin,Maharashtra,PH011,197,5
+2024-05-01,Ciprofloxacin,Tamil Nadu,PH011,166,5
+2024-05-01,Metronidazole,Tamil Nadu,PH011,1017,5
+2024-05-01,Doxycycline,Kerala,PH011,52,5
+2024-05-01,Amoxicillin,Kerala,PH012,54,5
+2024-05-01,Azithromycin,Karnataka,PH012,58,5
+2024-05-01,Ciprofloxacin,Tamil Nadu,PH012,110,5
+2024-05-01,Metronidazole,Karnataka,PH012,131,5
+2024-05-01,Doxycycline,Maharashtra,PH012,52,5
+2024-05-01,Amoxicillin,Tamil Nadu,PH013,62,5
+2024-05-01,Azithromycin,Karnataka,PH013,138,5
+2024-05-01,Ciprofloxacin,Tamil Nadu,PH013,150,5
+2024-05-01,Metronidazole,Kerala,PH013,116,5
+2024-05-01,Doxycycline,Kerala,PH013,1131,5
+2024-05-01,Amoxicillin,Tamil Nadu,PH014,58,5
+2024-05-01,Azithromycin,Kerala,PH014,54,5
+2024-05-01,Ciprofloxacin,Tamil Nadu,PH014,173,5
+2024-05-01,Metronidazole,Maharashtra,PH014,1253,5
+2024-05-01,Doxycycline,Kerala,PH014,109,5
+2024-05-01,Amoxicillin,Maharashtra,PH015,130,5
+2024-05-01,Azithromycin,Kerala,PH015,111,5
+2024-05-01,Ciprofloxacin,Tamil Nadu,PH015,116,5
+2024-05-01,Metronidazole,Tamil Nadu,PH015,89,5
+2024-05-01,Doxycycline,Kerala,PH015,82,5
+2024-05-01,Amoxicillin,Karnataka,PH016,129,5
+2024-05-01,Azithromycin,Kerala,PH016,108,5
+2024-05-01,Ciprofloxacin,Kerala,PH016,62,5
+2024-05-01,Metronidazole,Kerala,PH016,149,5
+2024-05-01,Doxycycline,Tamil Nadu,PH016,56,5
+2024-05-01,Amoxicillin,Kerala,PH017,107,5
+2024-05-01,Azithromycin,Karnataka,PH017,1471,5
+2024-05-01,Ciprofloxacin,Karnataka,PH017,88,5
+2024-05-01,Metronidazole,Maharashtra,PH017,51,5
+2024-05-01,Doxycycline,Kerala,PH017,1023,5
+2024-05-01,Amoxicillin,Kerala,PH018,95,5
+2024-05-01,Azithromycin,Kerala,PH018,66,5
+2024-05-01,Ciprofloxacin,Tamil Nadu,PH018,137,5
+2024-05-01,Metronidazole,Maharashtra,PH018,119,5
+2024-05-01,Doxycycline,Karnataka,PH018,123,5
+2024-05-01,Amoxicillin,Tamil Nadu,PH019,112,5
+2024-05-01,Azithromycin,Karnataka,PH019,86,5
+2024-05-01,Ciprofloxacin,Maharashtra,PH019,197,5
+2024-05-01,Metronidazole,Tamil Nadu,PH019,117,5
+2024-05-01,Doxycycline,Kerala,PH019,61,5
+2024-05-01,Amoxicillin,Tamil Nadu,PH020,167,5
+2024-05-01,Azithromycin,Tamil Nadu,PH020,1105,5
+2024-05-01,Ciprofloxacin,Tamil Nadu,PH020,78,5
+2024-05-01,Metronidazole,Karnataka,PH020,174,5
+2024-05-01,Doxycycline,Kerala,PH020,188,5
+2024-06-01,Amoxicillin,Karnataka,PH001,128,6
+2024-06-01,Azithromycin,Karnataka,PH001,1281,6
+2024-06-01,Ciprofloxacin,Tamil Nadu,PH001,78,6
+2024-06-01,Metronidazole,Karnataka,PH001,190,6
+2024-06-01,Doxycycline,Karnataka,PH001,168,6
+2024-06-01,Amoxicillin,Karnataka,PH002,165,6
+2024-06-01,Azithromycin,Karnataka,PH002,133,6
+2024-06-01,Ciprofloxacin,Karnataka,PH002,130,6
+2024-06-01,Metronidazole,Maharashtra,PH002,141,6
+2024-06-01,Doxycycline,Karnataka,PH002,150,6
+2024-06-01,Amoxicillin,Tamil Nadu,PH003,196,6
+2024-06-01,Azithromycin,Karnataka,PH003,50,6
+2024-06-01,Ciprofloxacin,Tamil Nadu,PH003,64,6
+2024-06-01,Metronidazole,Karnataka,PH003,113,6
+2024-06-01,Doxycycline,Maharashtra,PH003,61,6
+2024-06-01,Amoxicillin,Maharashtra,PH004,76,6
+2024-06-01,Azithromycin,Tamil Nadu,PH004,194,6
+2024-06-01,Ciprofloxacin,Maharashtra,PH004,128,6
+2024-06-01,Metronidazole,Tamil Nadu,PH004,180,6
+2024-06-01,Doxycycline,Maharashtra,PH004,73,6
+2024-06-01,Amoxicillin,Karnataka,PH005,197,6
+2024-06-01,Azithromycin,Kerala,PH005,66,6
+2024-06-01,Ciprofloxacin,Maharashtra,PH005,58,6
+2024-06-01,Metronidazole,Kerala,PH005,112,6
+2024-06-01,Doxycycline,Kerala,PH005,166,6
+2024-06-01,Amoxicillin,Maharashtra,PH006,188,6
+2024-06-01,Azithromycin,Kerala,PH006,121,6
+2024-06-01,Ciprofloxacin,Tamil Nadu,PH006,113,6
+2024-06-01,Metronidazole,Karnataka,PH006,144,6
+2024-06-01,Doxycycline,Karnataka,PH006,94,6
+2024-06-01,Amoxicillin,Maharashtra,PH007,151,6
+2024-06-01,Azithromycin,Karnataka,PH007,137,6
+2024-06-01,Ciprofloxacin,Maharashtra,PH007,170,6
+2024-06-01,Metronidazole,Karnataka,PH007,129,6
+2024-06-01,Doxycycline,Maharashtra,PH007,197,6
+2024-06-01,Amoxicillin,Maharashtra,PH008,146,6
+2024-06-01,Azithromycin,Kerala,PH008,126,6
+2024-06-01,Ciprofloxacin,Tamil Nadu,PH008,152,6
+2024-06-01,Metronidazole,Karnataka,PH008,139,6
+2024-06-01,Doxycycline,Tamil Nadu,PH008,192,6
+2024-06-01,Amoxicillin,Karnataka,PH009,98,6
+2024-06-01,Azithromycin,Kerala,PH009,872,6
+2024-06-01,Ciprofloxacin,Karnataka,PH009,90,6
+2024-06-01,Metronidazole,Maharashtra,PH009,121,6
+2024-06-01,Doxycycline,Tamil Nadu,PH009,133,6
+2024-06-01,Amoxicillin,Karnataka,PH010,176,6
+2024-06-01,Azithromycin,Maharashtra,PH010,181,6
+2024-06-01,Ciprofloxacin,Tamil Nadu,PH010,176,6
+2024-06-01,Metronidazole,Kerala,PH010,155,6
+2024-06-01,Doxycycline,Tamil Nadu,PH010,61,6
+2024-06-01,Amoxicillin,Kerala,PH011,74,6
+2024-06-01,Azithromycin,Tamil Nadu,PH011,196,6
+2024-06-01,Ciprofloxacin,Maharashtra,PH011,185,6
+2024-06-01,Metronidazole,Kerala,PH011,81,6
+2024-06-01,Doxycycline,Tamil Nadu,PH011,195,6
+2024-06-01,Amoxicillin,Kerala,PH012,145,6
+2024-06-01,Azithromycin,Karnataka,PH012,180,6
+2024-06-01,Ciprofloxacin,Karnataka,PH012,84,6
+2024-06-01,Metronidazole,Tamil Nadu,PH012,146,6
+2024-06-01,Doxycycline,Kerala,PH012,143,6
+2024-06-01,Amoxicillin,Tamil Nadu,PH013,73,6
+2024-06-01,Azithromycin,Maharashtra,PH013,157,6
+2024-06-01,Ciprofloxacin,Maharashtra,PH013,99,6
+2024-06-01,Metronidazole,Maharashtra,PH013,154,6
+2024-06-01,Doxycycline,Kerala,PH013,147,6
+2024-06-01,Amoxicillin,Tamil Nadu,PH014,128,6
+2024-06-01,Azithromycin,Tamil Nadu,PH014,88,6
+2024-06-01,Ciprofloxacin,Karnataka,PH014,174,6
+2024-06-01,Metronidazole,Kerala,PH014,67,6
+2024-06-01,Doxycycline,Karnataka,PH014,148,6
+2024-06-01,Amoxicillin,Maharashtra,PH015,136,6
+2024-06-01,Azithromycin,Tamil Nadu,PH015,127,6
+2024-06-01,Ciprofloxacin,Kerala,PH015,118,6
+2024-06-01,Metronidazole,Kerala,PH015,111,6
+2024-06-01,Doxycycline,Kerala,PH015,160,6
+2024-06-01,Amoxicillin,Karnataka,PH016,133,6
+2024-06-01,Azithromycin,Tamil Nadu,PH016,194,6
+2024-06-01,Ciprofloxacin,Kerala,PH016,77,6
+2024-06-01,Metronidazole,Kerala,PH016,54,6
+2024-06-01,Doxycycline,Maharashtra,PH016,94,6
+2024-06-01,Amoxicillin,Karnataka,PH017,188,6
+2024-06-01,Azithromycin,Tamil Nadu,PH017,63,6
+2024-06-01,Ciprofloxacin,Kerala,PH017,59,6
+2024-06-01,Metronidazole,Kerala,PH017,50,6
+2024-06-01,Doxycycline,Maharashtra,PH017,50,6
+2024-06-01,Amoxicillin,Tamil Nadu,PH018,1486,6
+2024-06-01,Azithromycin,Kerala,PH018,98,6
+2024-06-01,Ciprofloxacin,Maharashtra,PH018,105,6
+2024-06-01,Metronidazole,Karnataka,PH018,183,6
+2024-06-01,Doxycycline,Kerala,PH018,197,6
+2024-06-01,Amoxicillin,Tamil Nadu,PH019,86,6
+2024-06-01,Azithromycin,Kerala,PH019,50,6
+2024-06-01,Ciprofloxacin,Tamil Nadu,PH019,108,6
+2024-06-01,Metronidazole,Kerala,PH019,61,6
+2024-06-01,Doxycycline,Kerala,PH019,1016,6
+2024-06-01,Amoxicillin,Tamil Nadu,PH020,78,6
+2024-06-01,Azithromycin,Karnataka,PH020,87,6
+2024-06-01,Ciprofloxacin,Maharashtra,PH020,175,6
+2024-06-01,Metronidazole,Maharashtra,PH020,173,6
+2024-06-01,Doxycycline,Tamil Nadu,PH020,134,6
+2024-07-01,Amoxicillin,Maharashtra,PH001,145,7
+2024-07-01,Azithromycin,Karnataka,PH001,135,7
+2024-07-01,Ciprofloxacin,Kerala,PH001,104,7
+2024-07-01,Metronidazole,Karnataka,PH001,163,7
+2024-07-01,Doxycycline,Tamil Nadu,PH001,185,7
+2024-07-01,Amoxicillin,Kerala,PH002,125,7
+2024-07-01,Azithromycin,Kerala,PH002,95,7
+2024-07-01,Ciprofloxacin,Kerala,PH002,196,7
+2024-07-01,Metronidazole,Tamil Nadu,PH002,102,7
+2024-07-01,Doxycycline,Kerala,PH002,139,7
+2024-07-01,Amoxicillin,Tamil Nadu,PH003,112,7
+2024-07-01,Azithromycin,Kerala,PH003,138,7
+2024-07-01,Ciprofloxacin,Kerala,PH003,126,7
+2024-07-01,Metronidazole,Karnataka,PH003,117,7
+2024-07-01,Doxycycline,Tamil Nadu,PH003,181,7
+2024-07-01,Amoxicillin,Tamil Nadu,PH004,131,7
+2024-07-01,Azithromycin,Karnataka,PH004,132,7
+2024-07-01,Ciprofloxacin,Kerala,PH004,137,7
+2024-07-01,Metronidazole,Karnataka,PH004,138,7
+2024-07-01,Doxycycline,Kerala,PH004,125,7
+2024-07-01,Amoxicillin,Karnataka,PH005,198,7
+2024-07-01,Azithromycin,Kerala,PH005,98,7
+2024-07-01,Ciprofloxacin,Karnataka,PH005,151,7
+2024-07-01,Metronidazole,Karnataka,PH005,159,7
+2024-07-01,Doxycycline,Tamil Nadu,PH005,58,7
+2024-07-01,Amoxicillin,Tamil Nadu,PH006,121,7
+2024-07-01,Azithromycin,Tamil Nadu,PH006,166,7
+2024-07-01,Ciprofloxacin,Kerala,PH006,61,7
+2024-07-01,Metronidazole,Maharashtra,PH006,86,7
+2024-07-01,Doxycycline,Maharashtra,PH006,64,7
+2024-07-01,Amoxicillin,Karnataka,PH007,119,7
+2024-07-01,Azithromycin,Maharashtra,PH007,172,7
+2024-07-01,Ciprofloxacin,Kerala,PH007,916,7
+2024-07-01,Metronidazole,Maharashtra,PH007,192,7
+2024-07-01,Doxycycline,Karnataka,PH007,100,7
+2024-07-01,Amoxicillin,Kerala,PH008,190,7
+2024-07-01,Azithromycin,Tamil Nadu,PH008,127,7
+2024-07-01,Ciprofloxacin,Maharashtra,PH008,166,7
+2024-07-01,Metronidazole,Karnataka,PH008,84,7
+2024-07-01,Doxycycline,Tamil Nadu,PH008,195,7
+2024-07-01,Amoxicillin,Kerala,PH009,181,7
+2024-07-01,Azithromycin,Tamil Nadu,PH009,56,7
+2024-07-01,Ciprofloxacin,Tamil Nadu,PH009,88,7
+2024-07-01,Metronidazole,Karnataka,PH009,105,7
+2024-07-01,Doxycycline,Kerala,PH009,91,7
+2024-07-01,Amoxicillin,Maharashtra,PH010,167,7
+2024-07-01,Azithromycin,Kerala,PH010,169,7
+2024-07-01,Ciprofloxacin,Karnataka,PH010,917,7
+2024-07-01,Metronidazole,Kerala,PH010,186,7
+2024-07-01,Doxycycline,Karnataka,PH010,59,7
+2024-07-01,Amoxicillin,Kerala,PH011,174,7
+2024-07-01,Azithromycin,Maharashtra,PH011,98,7
+2024-07-01,Ciprofloxacin,Kerala,PH011,117,7
+2024-07-01,Metronidazole,Karnataka,PH011,149,7
+2024-07-01,Doxycycline,Tamil Nadu,PH011,138,7
+2024-07-01,Amoxicillin,Maharashtra,PH012,118,7
+2024-07-01,Azithromycin,Karnataka,PH012,157,7
+2024-07-01,Ciprofloxacin,Karnataka,PH012,198,7
+2024-07-01,Metronidazole,Maharashtra,PH012,86,7
+2024-07-01,Doxycycline,Maharashtra,PH012,60,7
+2024-07-01,Amoxicillin,Tamil Nadu,PH013,126,7
+2024-07-01,Azithromycin,Tamil Nadu,PH013,51,7
+2024-07-01,Ciprofloxacin,Karnataka,PH013,134,7
+2024-07-01,Metronidazole,Tamil Nadu,PH013,167,7
+2024-07-01,Doxycycline,Kerala,PH013,73,7
+2024-07-01,Amoxicillin,Karnataka,PH014,117,7
+2024-07-01,Azithromycin,Tamil Nadu,PH014,81,7
+2024-07-01,Ciprofloxacin,Tamil Nadu,PH014,85,7
+2024-07-01,Metronidazole,Kerala,PH014,180,7
+2024-07-01,Doxycycline,Kerala,PH014,172,7
+2024-07-01,Amoxicillin,Karnataka,PH015,62,7
+2024-07-01,Azithromycin,Tamil Nadu,PH015,54,7
+2024-07-01,Ciprofloxacin,Maharashtra,PH015,198,7
+2024-07-01,Metronidazole,Maharashtra,PH015,99,7
+2024-07-01,Doxycycline,Maharashtra,PH015,174,7
+2024-07-01,Amoxicillin,Tamil Nadu,PH016,119,7
+2024-07-01,Azithromycin,Maharashtra,PH016,51,7
+2024-07-01,Ciprofloxacin,Karnataka,PH016,147,7
+2024-07-01,Metronidazole,Maharashtra,PH016,57,7
+2024-07-01,Doxycycline,Tamil Nadu,PH016,85,7
+2024-07-01,Amoxicillin,Kerala,PH017,80,7
+2024-07-01,Azithromycin,Karnataka,PH017,155,7
+2024-07-01,Ciprofloxacin,Kerala,PH017,104,7
+2024-07-01,Metronidazole,Kerala,PH017,193,7
+2024-07-01,Doxycycline,Maharashtra,PH017,52,7
+2024-07-01,Amoxicillin,Kerala,PH018,72,7
+2024-07-01,Azithromycin,Maharashtra,PH018,167,7
+2024-07-01,Ciprofloxacin,Maharashtra,PH018,157,7
+2024-07-01,Metronidazole,Tamil Nadu,PH018,198,7
+2024-07-01,Doxycycline,Tamil Nadu,PH018,81,7
+2024-07-01,Amoxicillin,Maharashtra,PH019,87,7
+2024-07-01,Azithromycin,Kerala,PH019,191,7
+2024-07-01,Ciprofloxacin,Karnataka,PH019,163,7
+2024-07-01,Metronidazole,Kerala,PH019,134,7
+2024-07-01,Doxycycline,Kerala,PH019,124,7
+2024-07-01,Amoxicillin,Tamil Nadu,PH020,104,7
+2024-07-01,Azithromycin,Tamil Nadu,PH020,192,7
+2024-07-01,Ciprofloxacin,Kerala,PH020,61,7
+2024-07-01,Metronidazole,Tamil Nadu,PH020,131,7
+2024-07-01,Doxycycline,Tamil Nadu,PH020,183,7
+2024-08-01,Amoxicillin,Karnataka,PH001,63,8
+2024-08-01,Azithromycin,Kerala,PH001,115,8
+2024-08-01,Ciprofloxacin,Karnataka,PH001,69,8
+2024-08-01,Metronidazole,Tamil Nadu,PH001,74,8
+2024-08-01,Doxycycline,Kerala,PH001,103,8
+2024-08-01,Amoxicillin,Karnataka,PH002,63,8
+2024-08-01,Azithromycin,Maharashtra,PH002,103,8
+2024-08-01,Ciprofloxacin,Maharashtra,PH002,180,8
+2024-08-01,Metronidazole,Tamil Nadu,PH002,74,8
+2024-08-01,Doxycycline,Tamil Nadu,PH002,185,8
+2024-08-01,Amoxicillin,Maharashtra,PH003,74,8
+2024-08-01,Azithromycin,Kerala,PH003,61,8
+2024-08-01,Ciprofloxacin,Maharashtra,PH003,141,8
+2024-08-01,Metronidazole,Tamil Nadu,PH003,69,8
+2024-08-01,Doxycycline,Maharashtra,PH003,842,8
+2024-08-01,Amoxicillin,Tamil Nadu,PH004,179,8
+2024-08-01,Azithromycin,Karnataka,PH004,80,8
+2024-08-01,Ciprofloxacin,Karnataka,PH004,59,8
+2024-08-01,Metronidazole,Tamil Nadu,PH004,60,8
+2024-08-01,Doxycycline,Karnataka,PH004,105,8
+2024-08-01,Amoxicillin,Karnataka,PH005,132,8
+2024-08-01,Azithromycin,Kerala,PH005,122,8
+2024-08-01,Ciprofloxacin,Tamil Nadu,PH005,164,8
+2024-08-01,Metronidazole,Maharashtra,PH005,146,8
+2024-08-01,Doxycycline,Karnataka,PH005,89,8
+2024-08-01,Amoxicillin,Karnataka,PH006,173,8
+2024-08-01,Azithromycin,Maharashtra,PH006,173,8
+2024-08-01,Ciprofloxacin,Tamil Nadu,PH006,112,8
+2024-08-01,Metronidazole,Karnataka,PH006,111,8
+2024-08-01,Doxycycline,Karnataka,PH006,56,8
+2024-08-01,Amoxicillin,Tamil Nadu,PH007,63,8
+2024-08-01,Azithromycin,Kerala,PH007,135,8
+2024-08-01,Ciprofloxacin,Karnataka,PH007,179,8
+2024-08-01,Metronidazole,Kerala,PH007,128,8
+2024-08-01,Doxycycline,Karnataka,PH007,107,8
+2024-08-01,Amoxicillin,Kerala,PH008,114,8
+2024-08-01,Azithromycin,Tamil Nadu,PH008,131,8
+2024-08-01,Ciprofloxacin,Maharashtra,PH008,188,8
+2024-08-01,Metronidazole,Maharashtra,PH008,166,8
+2024-08-01,Doxycycline,Maharashtra,PH008,83,8
+2024-08-01,Amoxicillin,Maharashtra,PH009,131,8
+2024-08-01,Azithromycin,Kerala,PH009,91,8
+2024-08-01,Ciprofloxacin,Kerala,PH009,162,8
+2024-08-01,Metronidazole,Kerala,PH009,169,8
+2024-08-01,Doxycycline,Kerala,PH009,179,8
+2024-08-01,Amoxicillin,Kerala,PH010,146,8
+2024-08-01,Azithromycin,Tamil Nadu,PH010,70,8
+2024-08-01,Ciprofloxacin,Karnataka,PH010,83,8
+2024-08-01,Metronidazole,Tamil Nadu,PH010,128,8
+2024-08-01,Doxycycline,Karnataka,PH010,137,8
+2024-08-01,Amoxicillin,Kerala,PH011,136,8
+2024-08-01,Azithromycin,Kerala,PH011,136,8
+2024-08-01,Ciprofloxacin,Kerala,PH011,66,8
+2024-08-01,Metronidazole,Kerala,PH011,107,8
+2024-08-01,Doxycycline,Maharashtra,PH011,188,8
+2024-08-01,Amoxicillin,Karnataka,PH012,184,8
+2024-08-01,Azithromycin,Karnataka,PH012,54,8
+2024-08-01,Ciprofloxacin,Tamil Nadu,PH012,145,8
+2024-08-01,Metronidazole,Tamil Nadu,PH012,87,8
+2024-08-01,Doxycycline,Maharashtra,PH012,130,8
+2024-08-01,Amoxicillin,Maharashtra,PH013,153,8
+2024-08-01,Azithromycin,Tamil Nadu,PH013,98,8
+2024-08-01,Ciprofloxacin,Maharashtra,PH013,127,8
+2024-08-01,Metronidazole,Kerala,PH013,171,8
+2024-08-01,Doxycycline,Karnataka,PH013,163,8
+2024-08-01,Amoxicillin,Maharashtra,PH014,189,8
+2024-08-01,Azithromycin,Tamil Nadu,PH014,167,8
+2024-08-01,Ciprofloxacin,Maharashtra,PH014,144,8
+2024-08-01,Metronidazole,Maharashtra,PH014,173,8
+2024-08-01,Doxycycline,Tamil Nadu,PH014,64,8
+2024-08-01,Amoxicillin,Tamil Nadu,PH015,108,8
+2024-08-01,Azithromycin,Tamil Nadu,PH015,163,8
+2024-08-01,Ciprofloxacin,Tamil Nadu,PH015,81,8
+2024-08-01,Metronidazole,Kerala,PH015,169,8
+2024-08-01,Doxycycline,Tamil Nadu,PH015,81,8
+2024-08-01,Amoxicillin,Karnataka,PH016,61,8
+2024-08-01,Azithromycin,Tamil Nadu,PH016,198,8
+2024-08-01,Ciprofloxacin,Kerala,PH016,175,8
+2024-08-01,Metronidazole,Maharashtra,PH016,184,8
+2024-08-01,Doxycycline,Maharashtra,PH016,135,8
+2024-08-01,Amoxicillin,Kerala,PH017,71,8
+2024-08-01,Azithromycin,Kerala,PH017,51,8
+2024-08-01,Ciprofloxacin,Karnataka,PH017,76,8
+2024-08-01,Metronidazole,Karnataka,PH017,137,8
+2024-08-01,Doxycycline,Tamil Nadu,PH017,146,8
+2024-08-01,Amoxicillin,Karnataka,PH018,167,8
+2024-08-01,Azithromycin,Kerala,PH018,79,8
+2024-08-01,Ciprofloxacin,Karnataka,PH018,74,8
+2024-08-01,Metronidazole,Karnataka,PH018,185,8
+2024-08-01,Doxycycline,Maharashtra,PH018,121,8
+2024-08-01,Amoxicillin,Kerala,PH019,52,8
+2024-08-01,Azithromycin,Maharashtra,PH019,113,8
+2024-08-01,Ciprofloxacin,Karnataka,PH019,59,8
+2024-08-01,Metronidazole,Tamil Nadu,PH019,115,8
+2024-08-01,Doxycycline,Kerala,PH019,186,8
+2024-08-01,Amoxicillin,Tamil Nadu,PH020,139,8
+2024-08-01,Azithromycin,Maharashtra,PH020,63,8
+2024-08-01,Ciprofloxacin,Kerala,PH020,170,8
+2024-08-01,Metronidazole,Maharashtra,PH020,119,8
+2024-08-01,Doxycycline,Kerala,PH020,181,8
+2024-09-01,Amoxicillin,Maharashtra,PH001,69,9
+2024-09-01,Azithromycin,Tamil Nadu,PH001,86,9
+2024-09-01,Ciprofloxacin,Tamil Nadu,PH001,837,9
+2024-09-01,Metronidazole,Tamil Nadu,PH001,53,9
+2024-09-01,Doxycycline,Kerala,PH001,69,9
+2024-09-01,Amoxicillin,Karnataka,PH002,53,9
+2024-09-01,Azithromycin,Karnataka,PH002,129,9
+2024-09-01,Ciprofloxacin,Maharashtra,PH002,181,9
+2024-09-01,Metronidazole,Maharashtra,PH002,131,9
+2024-09-01,Doxycycline,Maharashtra,PH002,109,9
+2024-09-01,Amoxicillin,Karnataka,PH003,159,9
+2024-09-01,Azithromycin,Maharashtra,PH003,158,9
+2024-09-01,Ciprofloxacin,Tamil Nadu,PH003,166,9
+2024-09-01,Metronidazole,Maharashtra,PH003,68,9
+2024-09-01,Doxycycline,Maharashtra,PH003,143,9
+2024-09-01,Amoxicillin,Karnataka,PH004,195,9
+2024-09-01,Azithromycin,Kerala,PH004,96,9
+2024-09-01,Ciprofloxacin,Maharashtra,PH004,167,9
+2024-09-01,Metronidazole,Kerala,PH004,53,9
+2024-09-01,Doxycycline,Karnataka,PH004,192,9
+2024-09-01,Amoxicillin,Tamil Nadu,PH005,173,9
+2024-09-01,Azithromycin,Kerala,PH005,139,9
+2024-09-01,Ciprofloxacin,Kerala,PH005,110,9
+2024-09-01,Metronidazole,Karnataka,PH005,1053,9
+2024-09-01,Doxycycline,Tamil Nadu,PH005,130,9
+2024-09-01,Amoxicillin,Karnataka,PH006,196,9
+2024-09-01,Azithromycin,Tamil Nadu,PH006,118,9
+2024-09-01,Ciprofloxacin,Kerala,PH006,98,9
+2024-09-01,Metronidazole,Maharashtra,PH006,54,9
+2024-09-01,Doxycycline,Tamil Nadu,PH006,1094,9
+2024-09-01,Amoxicillin,Tamil Nadu,PH007,178,9
+2024-09-01,Azithromycin,Maharashtra,PH007,119,9
+2024-09-01,Ciprofloxacin,Tamil Nadu,PH007,109,9
+2024-09-01,Metronidazole,Kerala,PH007,80,9
+2024-09-01,Doxycycline,Kerala,PH007,1207,9
+2024-09-01,Amoxicillin,Maharashtra,PH008,155,9
+2024-09-01,Azithromycin,Maharashtra,PH008,184,9
+2024-09-01,Ciprofloxacin,Maharashtra,PH008,63,9
+2024-09-01,Metronidazole,Maharashtra,PH008,193,9
+2024-09-01,Doxycycline,Tamil Nadu,PH008,119,9
+2024-09-01,Amoxicillin,Kerala,PH009,156,9
+2024-09-01,Azithromycin,Tamil Nadu,PH009,156,9
+2024-09-01,Ciprofloxacin,Maharashtra,PH009,56,9
+2024-09-01,Metronidazole,Karnataka,PH009,197,9
+2024-09-01,Doxycycline,Maharashtra,PH009,198,9
+2024-09-01,Amoxicillin,Maharashtra,PH010,169,9
+2024-09-01,Azithromycin,Kerala,PH010,107,9
+2024-09-01,Ciprofloxacin,Kerala,PH010,180,9
+2024-09-01,Metronidazole,Kerala,PH010,98,9
+2024-09-01,Doxycycline,Kerala,PH010,134,9
+2024-09-01,Amoxicillin,Kerala,PH011,166,9
+2024-09-01,Azithromycin,Tamil Nadu,PH011,120,9
+2024-09-01,Ciprofloxacin,Kerala,PH011,130,9
+2024-09-01,Metronidazole,Kerala,PH011,147,9
+2024-09-01,Doxycycline,Karnataka,PH011,135,9
+2024-09-01,Amoxicillin,Tamil Nadu,PH012,147,9
+2024-09-01,Azithromycin,Kerala,PH012,54,9
+2024-09-01,Ciprofloxacin,Maharashtra,PH012,106,9
+2024-09-01,Metronidazole,Tamil Nadu,PH012,193,9
+2024-09-01,Doxycycline,Kerala,PH012,135,9
+2024-09-01,Amoxicillin,Karnataka,PH013,87,9
+2024-09-01,Azithromycin,Tamil Nadu,PH013,148,9
+2024-09-01,Ciprofloxacin,Karnataka,PH013,98,9
+2024-09-01,Metronidazole,Karnataka,PH013,70,9
+2024-09-01,Doxycycline,Karnataka,PH013,117,9
+2024-09-01,Amoxicillin,Tamil Nadu,PH014,192,9
+2024-09-01,Azithromycin,Kerala,PH014,128,9
+2024-09-01,Ciprofloxacin,Maharashtra,PH014,63,9
+2024-09-01,Metronidazole,Kerala,PH014,107,9
+2024-09-01,Doxycycline,Kerala,PH014,115,9
+2024-09-01,Amoxicillin,Tamil Nadu,PH015,180,9
+2024-09-01,Azithromycin,Kerala,PH015,91,9
+2024-09-01,Ciprofloxacin,Tamil Nadu,PH015,72,9
+2024-09-01,Metronidazole,Tamil Nadu,PH015,196,9
+2024-09-01,Doxycycline,Karnataka,PH015,61,9
+2024-09-01,Amoxicillin,Maharashtra,PH016,90,9
+2024-09-01,Azithromycin,Kerala,PH016,121,9
+2024-09-01,Ciprofloxacin,Karnataka,PH016,192,9
+2024-09-01,Metronidazole,Maharashtra,PH016,91,9
+2024-09-01,Doxycycline,Tamil Nadu,PH016,61,9
+2024-09-01,Amoxicillin,Maharashtra,PH017,180,9
+2024-09-01,Azithromycin,Karnataka,PH017,163,9
+2024-09-01,Ciprofloxacin,Tamil Nadu,PH017,1319,9
+2024-09-01,Metronidazole,Kerala,PH017,173,9
+2024-09-01,Doxycycline,Kerala,PH017,53,9
+2024-09-01,Amoxicillin,Tamil Nadu,PH018,68,9
+2024-09-01,Azithromycin,Maharashtra,PH018,188,9
+2024-09-01,Ciprofloxacin,Maharashtra,PH018,178,9
+2024-09-01,Metronidazole,Karnataka,PH018,70,9
+2024-09-01,Doxycycline,Tamil Nadu,PH018,53,9
+2024-09-01,Amoxicillin,Tamil Nadu,PH019,108,9
+2024-09-01,Azithromycin,Karnataka,PH019,118,9
+2024-09-01,Ciprofloxacin,Kerala,PH019,74,9
+2024-09-01,Metronidazole,Tamil Nadu,PH019,175,9
+2024-09-01,Doxycycline,Karnataka,PH019,58,9
+2024-09-01,Amoxicillin,Tamil Nadu,PH020,183,9
+2024-09-01,Azithromycin,Maharashtra,PH020,170,9
+2024-09-01,Ciprofloxacin,Karnataka,PH020,157,9
+2024-09-01,Metronidazole,Kerala,PH020,180,9
+2024-09-01,Doxycycline,Tamil Nadu,PH020,70,9
+2024-10-01,Amoxicillin,Tamil Nadu,PH001,83,10
+2024-10-01,Azithromycin,Karnataka,PH001,131,10
+2024-10-01,Ciprofloxacin,Kerala,PH001,72,10
+2024-10-01,Metronidazole,Tamil Nadu,PH001,66,10
+2024-10-01,Doxycycline,Karnataka,PH001,143,10
+2024-10-01,Amoxicillin,Karnataka,PH002,82,10
+2024-10-01,Azithromycin,Maharashtra,PH002,115,10
+2024-10-01,Ciprofloxacin,Maharashtra,PH002,96,10
+2024-10-01,Metronidazole,Kerala,PH002,197,10
+2024-10-01,Doxycycline,Maharashtra,PH002,136,10
+2024-10-01,Amoxicillin,Karnataka,PH003,53,10
+2024-10-01,Azithromycin,Karnataka,PH003,87,10
+2024-10-01,Ciprofloxacin,Kerala,PH003,106,10
+2024-10-01,Metronidazole,Tamil Nadu,PH003,191,10
+2024-10-01,Doxycycline,Kerala,PH003,88,10
+2024-10-01,Amoxicillin,Maharashtra,PH004,126,10
+2024-10-01,Azithromycin,Karnataka,PH004,183,10
+2024-10-01,Ciprofloxacin,Karnataka,PH004,140,10
+2024-10-01,Metronidazole,Tamil Nadu,PH004,87,10
+2024-10-01,Doxycycline,Kerala,PH004,121,10
+2024-10-01,Amoxicillin,Karnataka,PH005,79,10
+2024-10-01,Azithromycin,Karnataka,PH005,1223,10
+2024-10-01,Ciprofloxacin,Maharashtra,PH005,63,10
+2024-10-01,Metronidazole,Karnataka,PH005,199,10
+2024-10-01,Doxycycline,Karnataka,PH005,159,10
+2024-10-01,Amoxicillin,Tamil Nadu,PH006,68,10
+2024-10-01,Azithromycin,Maharashtra,PH006,120,10
+2024-10-01,Ciprofloxacin,Kerala,PH006,173,10
+2024-10-01,Metronidazole,Maharashtra,PH006,68,10
+2024-10-01,Doxycycline,Tamil Nadu,PH006,169,10
+2024-10-01,Amoxicillin,Kerala,PH007,1472,10
+2024-10-01,Azithromycin,Maharashtra,PH007,101,10
+2024-10-01,Ciprofloxacin,Karnataka,PH007,102,10
+2024-10-01,Metronidazole,Karnataka,PH007,127,10
+2024-10-01,Doxycycline,Maharashtra,PH007,117,10
+2024-10-01,Amoxicillin,Tamil Nadu,PH008,154,10
+2024-10-01,Azithromycin,Tamil Nadu,PH008,169,10
+2024-10-01,Ciprofloxacin,Karnataka,PH008,65,10
+2024-10-01,Metronidazole,Kerala,PH008,61,10
+2024-10-01,Doxycycline,Maharashtra,PH008,99,10
+2024-10-01,Amoxicillin,Kerala,PH009,118,10
+2024-10-01,Azithromycin,Kerala,PH009,186,10
+2024-10-01,Ciprofloxacin,Kerala,PH009,1142,10
+2024-10-01,Metronidazole,Karnataka,PH009,125,10
+2024-10-01,Doxycycline,Tamil Nadu,PH009,96,10
+2024-10-01,Amoxicillin,Karnataka,PH010,75,10
+2024-10-01,Azithromycin,Tamil Nadu,PH010,70,10
+2024-10-01,Ciprofloxacin,Maharashtra,PH010,181,10
+2024-10-01,Metronidazole,Maharashtra,PH010,77,10
+2024-10-01,Doxycycline,Maharashtra,PH010,116,10
+2024-10-01,Amoxicillin,Tamil Nadu,PH011,140,10
+2024-10-01,Azithromycin,Kerala,PH011,121,10
+2024-10-01,Ciprofloxacin,Tamil Nadu,PH011,1061,10
+2024-10-01,Metronidazole,Tamil Nadu,PH011,76,10
+2024-10-01,Doxycycline,Maharashtra,PH011,155,10
+2024-10-01,Amoxicillin,Kerala,PH012,158,10
+2024-10-01,Azithromycin,Maharashtra,PH012,191,10
+2024-10-01,Ciprofloxacin,Kerala,PH012,133,10
+2024-10-01,Metronidazole,Kerala,PH012,989,10
+2024-10-01,Doxycycline,Maharashtra,PH012,92,10
+2024-10-01,Amoxicillin,Kerala,PH013,139,10
+2024-10-01,Azithromycin,Kerala,PH013,111,10
+2024-10-01,Ciprofloxacin,Tamil Nadu,PH013,175,10
+2024-10-01,Metronidazole,Maharashtra,PH013,86,10
+2024-10-01,Doxycycline,Kerala,PH013,137,10
+2024-10-01,Amoxicillin,Karnataka,PH014,1293,10
+2024-10-01,Azithromycin,Karnataka,PH014,188,10
+2024-10-01,Ciprofloxacin,Tamil Nadu,PH014,94,10
+2024-10-01,Metronidazole,Maharashtra,PH014,68,10
+2024-10-01,Doxycycline,Maharashtra,PH014,158,10
+2024-10-01,Amoxicillin,Maharashtra,PH015,94,10
+2024-10-01,Azithromycin,Maharashtra,PH015,57,10
+2024-10-01,Ciprofloxacin,Tamil Nadu,PH015,136,10
+2024-10-01,Metronidazole,Karnataka,PH015,133,10
+2024-10-01,Doxycycline,Tamil Nadu,PH015,117,10
+2024-10-01,Amoxicillin,Karnataka,PH016,131,10
+2024-10-01,Azithromycin,Karnataka,PH016,133,10
+2024-10-01,Ciprofloxacin,Maharashtra,PH016,171,10
+2024-10-01,Metronidazole,Kerala,PH016,51,10
+2024-10-01,Doxycycline,Kerala,PH016,100,10
+2024-10-01,Amoxicillin,Tamil Nadu,PH017,191,10
+2024-10-01,Azithromycin,Tamil Nadu,PH017,170,10
+2024-10-01,Ciprofloxacin,Karnataka,PH017,133,10
+2024-10-01,Metronidazole,Kerala,PH017,51,10
+2024-10-01,Doxycycline,Karnataka,PH017,193,10
+2024-10-01,Amoxicillin,Tamil Nadu,PH018,130,10
+2024-10-01,Azithromycin,Maharashtra,PH018,114,10
+2024-10-01,Ciprofloxacin,Karnataka,PH018,150,10
+2024-10-01,Metronidazole,Kerala,PH018,176,10
+2024-10-01,Doxycycline,Karnataka,PH018,87,10
+2024-10-01,Amoxicillin,Tamil Nadu,PH019,156,10
+2024-10-01,Azithromycin,Karnataka,PH019,168,10
+2024-10-01,Ciprofloxacin,Tamil Nadu,PH019,171,10
+2024-10-01,Metronidazole,Maharashtra,PH019,147,10
+2024-10-01,Doxycycline,Karnataka,PH019,128,10
+2024-10-01,Amoxicillin,Karnataka,PH020,153,10
+2024-10-01,Azithromycin,Maharashtra,PH020,1179,10
+2024-10-01,Ciprofloxacin,Kerala,PH020,83,10
+2024-10-01,Metronidazole,Kerala,PH020,56,10
+2024-10-01,Doxycycline,Maharashtra,PH020,114,10
+2024-11-01,Amoxicillin,Maharashtra,PH001,1243,11
+2024-11-01,Azithromycin,Tamil Nadu,PH001,175,11
+2024-11-01,Ciprofloxacin,Kerala,PH001,87,11
+2024-11-01,Metronidazole,Maharashtra,PH001,165,11
+2024-11-01,Doxycycline,Tamil Nadu,PH001,114,11
+2024-11-01,Amoxicillin,Kerala,PH002,158,11
+2024-11-01,Azithromycin,Tamil Nadu,PH002,169,11
+2024-11-01,Ciprofloxacin,Karnataka,PH002,124,11
+2024-11-01,Metronidazole,Tamil Nadu,PH002,156,11
+2024-11-01,Doxycycline,Tamil Nadu,PH002,924,11
+2024-11-01,Amoxicillin,Karnataka,PH003,79,11
+2024-11-01,Azithromycin,Tamil Nadu,PH003,174,11
+2024-11-01,Ciprofloxacin,Maharashtra,PH003,150,11
+2024-11-01,Metronidazole,Tamil Nadu,PH003,67,11
+2024-11-01,Doxycycline,Kerala,PH003,78,11
+2024-11-01,Amoxicillin,Karnataka,PH004,175,11
+2024-11-01,Azithromycin,Kerala,PH004,71,11
+2024-11-01,Ciprofloxacin,Kerala,PH004,98,11
+2024-11-01,Metronidazole,Kerala,PH004,135,11
+2024-11-01,Doxycycline,Karnataka,PH004,180,11
+2024-11-01,Amoxicillin,Maharashtra,PH005,158,11
+2024-11-01,Azithromycin,Kerala,PH005,134,11
+2024-11-01,Ciprofloxacin,Maharashtra,PH005,70,11
+2024-11-01,Metronidazole,Karnataka,PH005,117,11
+2024-11-01,Doxycycline,Maharashtra,PH005,73,11
+2024-11-01,Amoxicillin,Kerala,PH006,160,11
+2024-11-01,Azithromycin,Maharashtra,PH006,66,11
+2024-11-01,Ciprofloxacin,Tamil Nadu,PH006,153,11
+2024-11-01,Metronidazole,Maharashtra,PH006,68,11
+2024-11-01,Doxycycline,Kerala,PH006,1456,11
+2024-11-01,Amoxicillin,Kerala,PH007,167,11
+2024-11-01,Azithromycin,Maharashtra,PH007,140,11
+2024-11-01,Ciprofloxacin,Karnataka,PH007,103,11
+2024-11-01,Metronidazole,Maharashtra,PH007,198,11
+2024-11-01,Doxycycline,Karnataka,PH007,54,11
+2024-11-01,Amoxicillin,Maharashtra,PH008,1381,11
+2024-11-01,Azithromycin,Kerala,PH008,164,11
+2024-11-01,Ciprofloxacin,Maharashtra,PH008,157,11
+2024-11-01,Metronidazole,Maharashtra,PH008,119,11
+2024-11-01,Doxycycline,Tamil Nadu,PH008,151,11
+2024-11-01,Amoxicillin,Tamil Nadu,PH009,192,11
+2024-11-01,Azithromycin,Maharashtra,PH009,131,11
+2024-11-01,Ciprofloxacin,Karnataka,PH009,53,11
+2024-11-01,Metronidazole,Karnataka,PH009,97,11
+2024-11-01,Doxycycline,Maharashtra,PH009,1136,11
+2024-11-01,Amoxicillin,Kerala,PH010,145,11
+2024-11-01,Azithromycin,Karnataka,PH010,87,11
+2024-11-01,Ciprofloxacin,Kerala,PH010,62,11
+2024-11-01,Metronidazole,Kerala,PH010,80,11
+2024-11-01,Doxycycline,Tamil Nadu,PH010,71,11
+2024-11-01,Amoxicillin,Karnataka,PH011,116,11
+2024-11-01,Azithromycin,Tamil Nadu,PH011,113,11
+2024-11-01,Ciprofloxacin,Maharashtra,PH011,84,11
+2024-11-01,Metronidazole,Kerala,PH011,96,11
+2024-11-01,Doxycycline,Tamil Nadu,PH011,57,11
+2024-11-01,Amoxicillin,Maharashtra,PH012,1378,11
+2024-11-01,Azithromycin,Kerala,PH012,85,11
+2024-11-01,Ciprofloxacin,Kerala,PH012,192,11
+2024-11-01,Metronidazole,Maharashtra,PH012,185,11
+2024-11-01,Doxycycline,Maharashtra,PH012,176,11
+2024-11-01,Amoxicillin,Karnataka,PH013,153,11
+2024-11-01,Azithromycin,Tamil Nadu,PH013,177,11
+2024-11-01,Ciprofloxacin,Karnataka,PH013,151,11
+2024-11-01,Metronidazole,Maharashtra,PH013,52,11
+2024-11-01,Doxycycline,Kerala,PH013,882,11
+2024-11-01,Amoxicillin,Karnataka,PH014,151,11
+2024-11-01,Azithromycin,Maharashtra,PH014,194,11
+2024-11-01,Ciprofloxacin,Tamil Nadu,PH014,173,11
+2024-11-01,Metronidazole,Maharashtra,PH014,115,11
+2024-11-01,Doxycycline,Kerala,PH014,160,11
+2024-11-01,Amoxicillin,Tamil Nadu,PH015,88,11
+2024-11-01,Azithromycin,Karnataka,PH015,169,11
+2024-11-01,Ciprofloxacin,Karnataka,PH015,167,11
+2024-11-01,Metronidazole,Kerala,PH015,88,11
+2024-11-01,Doxycycline,Kerala,PH015,62,11
+2024-11-01,Amoxicillin,Kerala,PH016,68,11
+2024-11-01,Azithromycin,Tamil Nadu,PH016,80,11
+2024-11-01,Ciprofloxacin,Karnataka,PH016,81,11
+2024-11-01,Metronidazole,Tamil Nadu,PH016,103,11
+2024-11-01,Doxycycline,Maharashtra,PH016,163,11
+2024-11-01,Amoxicillin,Maharashtra,PH017,159,11
+2024-11-01,Azithromycin,Maharashtra,PH017,128,11
+2024-11-01,Ciprofloxacin,Karnataka,PH017,53,11
+2024-11-01,Metronidazole,Karnataka,PH017,57,11
+2024-11-01,Doxycycline,Karnataka,PH017,83,11
+2024-11-01,Amoxicillin,Tamil Nadu,PH018,176,11
+2024-11-01,Azithromycin,Maharashtra,PH018,98,11
+2024-11-01,Ciprofloxacin,Karnataka,PH018,895,11
+2024-11-01,Metronidazole,Tamil Nadu,PH018,87,11
+2024-11-01,Doxycycline,Maharashtra,PH018,99,11
+2024-11-01,Amoxicillin,Tamil Nadu,PH019,118,11
+2024-11-01,Azithromycin,Maharashtra,PH019,188,11
+2024-11-01,Ciprofloxacin,Karnataka,PH019,196,11
+2024-11-01,Metronidazole,Tamil Nadu,PH019,149,11
+2024-11-01,Doxycycline,Karnataka,PH019,190,11
+2024-11-01,Amoxicillin,Tamil Nadu,PH020,161,11
+2024-11-01,Azithromycin,Karnataka,PH020,194,11
+2024-11-01,Ciprofloxacin,Tamil Nadu,PH020,109,11
+2024-11-01,Metronidazole,Maharashtra,PH020,187,11
+2024-11-01,Doxycycline,Kerala,PH020,198,11
+2024-12-01,Amoxicillin,Kerala,PH001,73,12
+2024-12-01,Azithromycin,Kerala,PH001,74,12
+2024-12-01,Ciprofloxacin,Kerala,PH001,133,12
+2024-12-01,Metronidazole,Maharashtra,PH001,900,12
+2024-12-01,Doxycycline,Tamil Nadu,PH001,97,12
+2024-12-01,Amoxicillin,Maharashtra,PH002,90,12
+2024-12-01,Azithromycin,Maharashtra,PH002,195,12
+2024-12-01,Ciprofloxacin,Karnataka,PH002,154,12
+2024-12-01,Metronidazole,Kerala,PH002,62,12
+2024-12-01,Doxycycline,Kerala,PH002,149,12
+2024-12-01,Amoxicillin,Maharashtra,PH003,186,12
+2024-12-01,Azithromycin,Karnataka,PH003,103,12
+2024-12-01,Ciprofloxacin,Kerala,PH003,149,12
+2024-12-01,Metronidazole,Kerala,PH003,186,12
+2024-12-01,Doxycycline,Karnataka,PH003,85,12
+2024-12-01,Amoxicillin,Maharashtra,PH004,119,12
+2024-12-01,Azithromycin,Kerala,PH004,77,12
+2024-12-01,Ciprofloxacin,Tamil Nadu,PH004,114,12
+2024-12-01,Metronidazole,Maharashtra,PH004,62,12
+2024-12-01,Doxycycline,Tamil Nadu,PH004,103,12
+2024-12-01,Amoxicillin,Maharashtra,PH005,96,12
+2024-12-01,Azithromycin,Tamil Nadu,PH005,62,12
+2024-12-01,Ciprofloxacin,Maharashtra,PH005,1197,12
+2024-12-01,Metronidazole,Tamil Nadu,PH005,180,12
+2024-12-01,Doxycycline,Kerala,PH005,61,12
+2024-12-01,Amoxicillin,Maharashtra,PH006,78,12
+2024-12-01,Azithromycin,Maharashtra,PH006,171,12
+2024-12-01,Ciprofloxacin,Tamil Nadu,PH006,114,12
+2024-12-01,Metronidazole,Maharashtra,PH006,65,12
+2024-12-01,Doxycycline,Maharashtra,PH006,141,12
+2024-12-01,Amoxicillin,Karnataka,PH007,183,12
+2024-12-01,Azithromycin,Maharashtra,PH007,82,12
+2024-12-01,Ciprofloxacin,Karnataka,PH007,106,12
+2024-12-01,Metronidazole,Maharashtra,PH007,92,12
+2024-12-01,Doxycycline,Kerala,PH007,184,12
+2024-12-01,Amoxicillin,Karnataka,PH008,124,12
+2024-12-01,Azithromycin,Karnataka,PH008,94,12
+2024-12-01,Ciprofloxacin,Maharashtra,PH008,153,12
+2024-12-01,Metronidazole,Kerala,PH008,147,12
+2024-12-01,Doxycycline,Kerala,PH008,128,12
+2024-12-01,Amoxicillin,Maharashtra,PH009,53,12
+2024-12-01,Azithromycin,Kerala,PH009,168,12
+2024-12-01,Ciprofloxacin,Maharashtra,PH009,124,12
+2024-12-01,Metronidazole,Maharashtra,PH009,71,12
+2024-12-01,Doxycycline,Karnataka,PH009,139,12
+2024-12-01,Amoxicillin,Tamil Nadu,PH010,75,12
+2024-12-01,Azithromycin,Karnataka,PH010,94,12
+2024-12-01,Ciprofloxacin,Kerala,PH010,153,12
+2024-12-01,Metronidazole,Karnataka,PH010,114,12
+2024-12-01,Doxycycline,Maharashtra,PH010,151,12
+2024-12-01,Amoxicillin,Maharashtra,PH011,106,12
+2024-12-01,Azithromycin,Kerala,PH011,75,12
+2024-12-01,Ciprofloxacin,Kerala,PH011,133,12
+2024-12-01,Metronidazole,Karnataka,PH011,103,12
+2024-12-01,Doxycycline,Tamil Nadu,PH011,64,12
+2024-12-01,Amoxicillin,Tamil Nadu,PH012,70,12
+2024-12-01,Azithromycin,Tamil Nadu,PH012,87,12
+2024-12-01,Ciprofloxacin,Tamil Nadu,PH012,127,12
+2024-12-01,Metronidazole,Kerala,PH012,52,12
+2024-12-01,Doxycycline,Kerala,PH012,57,12
+2024-12-01,Amoxicillin,Karnataka,PH013,157,12
+2024-12-01,Azithromycin,Maharashtra,PH013,124,12
+2024-12-01,Ciprofloxacin,Karnataka,PH013,144,12
+2024-12-01,Metronidazole,Tamil Nadu,PH013,65,12
+2024-12-01,Doxycycline,Maharashtra,PH013,97,12
+2024-12-01,Amoxicillin,Karnataka,PH014,139,12
+2024-12-01,Azithromycin,Maharashtra,PH014,188,12
+2024-12-01,Ciprofloxacin,Tamil Nadu,PH014,68,12
+2024-12-01,Metronidazole,Tamil Nadu,PH014,1189,12
+2024-12-01,Doxycycline,Maharashtra,PH014,157,12
+2024-12-01,Amoxicillin,Karnataka,PH015,174,12
+2024-12-01,Azithromycin,Karnataka,PH015,92,12
+2024-12-01,Ciprofloxacin,Tamil Nadu,PH015,57,12
+2024-12-01,Metronidazole,Maharashtra,PH015,145,12
+2024-12-01,Doxycycline,Tamil Nadu,PH015,114,12
+2024-12-01,Amoxicillin,Kerala,PH016,133,12
+2024-12-01,Azithromycin,Tamil Nadu,PH016,142,12
+2024-12-01,Ciprofloxacin,Kerala,PH016,123,12
+2024-12-01,Metronidazole,Maharashtra,PH016,153,12
+2024-12-01,Doxycycline,Maharashtra,PH016,140,12
+2024-12-01,Amoxicillin,Karnataka,PH017,170,12
+2024-12-01,Azithromycin,Maharashtra,PH017,1064,12
+2024-12-01,Ciprofloxacin,Tamil Nadu,PH017,83,12
+2024-12-01,Metronidazole,Maharashtra,PH017,138,12
+2024-12-01,Doxycycline,Kerala,PH017,116,12
+2024-12-01,Amoxicillin,Kerala,PH018,143,12
+2024-12-01,Azithromycin,Kerala,PH018,152,12
+2024-12-01,Ciprofloxacin,Tamil Nadu,PH018,66,12
+2024-12-01,Metronidazole,Maharashtra,PH018,142,12
+2024-12-01,Doxycycline,Karnataka,PH018,131,12
+2024-12-01,Amoxicillin,Tamil Nadu,PH019,50,12
+2024-12-01,Azithromycin,Kerala,PH019,197,12
+2024-12-01,Ciprofloxacin,Tamil Nadu,PH019,108,12
+2024-12-01,Metronidazole,Kerala,PH019,1200,12
+2024-12-01,Doxycycline,Tamil Nadu,PH019,147,12
+2024-12-01,Amoxicillin,Kerala,PH020,117,12
+2024-12-01,Azithromycin,Karnataka,PH020,105,12
+2024-12-01,Ciprofloxacin,Karnataka,PH020,125,12
+2024-12-01,Metronidazole,Karnataka,PH020,158,12
+2024-12-01,Doxycycline,Karnataka,PH020,120,12
