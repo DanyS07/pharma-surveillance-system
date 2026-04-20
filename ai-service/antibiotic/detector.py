@@ -5,23 +5,18 @@ from sklearn.preprocessing import LabelEncoder
 import joblib
 import os
 
-def load_data(path='data/sample_sales.csv'):
+def load_data(path=r'C:\Users\abhis\Desktop\pharma-surveillance-system\ai-service\antibiotic\data\sample_sales.csv.csv'):
     df = pd.read_csv(path)
-    df['date'] = pd.to_datetime(df['date'])
     return df
 
 def preprocess(df):
-    le_ab = LabelEncoder()
-    le_region = LabelEncoder()
-    le_pharma = LabelEncoder()
-
     df = df.copy()
-    df['ab_encoded'] = le_ab.fit_transform(df['antibiotic_name'])
-    df['region_encoded'] = le_region.fit_transform(df['region'])
-    df['pharma_encoded'] = le_pharma.fit_transform(df['pharmacy_id'])
 
-    features = df[['ab_encoded', 'region_encoded', 'pharma_encoded', 'units_sold', 'month']]
-    return features, df, le_ab
+    le_drug = LabelEncoder()
+    df['drug_encoded'] = le_drug.fit_transform(df['drug_name'])
+
+    features = df[['drug_encoded', 'quantity_sold', 'unit_price']]
+    return features, df, le_drug
 
 def train_model(features):
     model = IsolationForest(contamination=0.05, random_state=42)
@@ -35,9 +30,8 @@ def detect_anomalies(df=None, path='data/sample_sales.csv'):
     if df is None:
         df = load_data(path)
 
-    features, df_copy, le_ab = preprocess(df)
+    features, df_copy, le_drug = preprocess(df)
 
-    # Load model if exists, else train
     if os.path.exists('models/anomaly_model.pkl'):
         model = joblib.load('models/anomaly_model.pkl')
     else:
@@ -48,7 +42,8 @@ def detect_anomalies(df=None, path='data/sample_sales.csv'):
     df_copy['is_anomaly'] = df_copy['is_anomaly'].map({1: False, -1: True})
 
     anomalies = df_copy[df_copy['is_anomaly'] == True][[
-        'date', 'antibiotic_name', 'region', 'pharmacy_id', 'units_sold', 'anomaly_score'
+        'record_id', 'drug_name', 'batch_number',
+        'quantity_sold', 'unit_price', 'month', 'year', 'anomaly_score'
     ]]
 
     return anomalies.to_dict(orient='records')
