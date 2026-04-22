@@ -1,4 +1,4 @@
-import pandas as pd
+code = '''import pandas as pd
 import numpy as np
 from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import LabelEncoder
@@ -91,3 +91,8 @@ def detect_anomalies(df=None, path="data/sample_sales.csv"):
         "quantity_sold", "unit_price", "month", "year", "anomaly_score"
     ]]
     return anomalies.to_dict(orient="records")
+'''
+
+with open('detector.py', 'w', encoding='utf-8') as f:
+    f.write(code)
+print("detector.py fixed successfully!")
