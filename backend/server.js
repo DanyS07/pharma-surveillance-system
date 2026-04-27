@@ -6,7 +6,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const rateLimit     = require('express-rate-limit');
 const app           = express();
 require('dotenv').config();
-require('./db');
+const connectDB     = require('./db');
 
 app.use(helmet());
 app.use(cors({
@@ -51,4 +51,12 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Pharma server running on PORT ${PORT}`));
+
+connectDB()
+    .then(() => {
+        app.listen(PORT, () => console.log(`Pharma server running on PORT ${PORT}`));
+    })
+    .catch((err) => {
+        console.error('MongoDB connection error:', err.message);
+        process.exit(1);
+    });

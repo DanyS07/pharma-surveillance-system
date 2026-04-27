@@ -1,12 +1,24 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
- 
-mongoose.connect(process.env.MONGODB_URL)
-    .then(() => {
-        console.log('MongoDB connected successfully');
-    })
-    .catch((err) => {
-        console.log('MongoDB connection error:', err.message);
-        process.exit(1);
-    });
- 
+
+async function connectDB() {
+    const connectionString = process.env.MONGODB_URL_DIRECT || process.env.MONGODB_URL;
+
+    if (!connectionString) {
+        throw new Error('Missing MongoDB connection string. Set MONGODB_URL or MONGODB_URL_DIRECT.');
+    }
+
+    try {
+        await mongoose.connect(connectionString, {
+            serverSelectionTimeoutMS: 10000,
+        });
+        console.log(`MongoDB connected successfully using ${process.env.MONGODB_URL_DIRECT ? 'direct' : 'SRV'} connection`);
+    } catch (err) {
+        if (err.message.includes('querySrv')) {
+            console.log('MongoDB connection error: SRV lookup failed. Try setting MONGODB_URL_DIRECT in backend/.env.');
+        }
+        throw err;
+    }
+}
+
+module.exports = connectDB;

@@ -8,6 +8,10 @@ const {
     sendToAI,
     processAIResults,
 } = require('../services/nsqService');
+const {
+    fetchAntibioticReferenceRecords,
+    sendAntibioticRowsToAI,
+} = require('../services/antibioticService');
 
 const ALLOWED_EXTS  = ['.csv', '.xls', '.xlsx'];
 const ALLOWED_MIMES = [
@@ -224,5 +228,50 @@ exports.getSession = async (req, res) => {
     } catch (err) {
         console.error('getSession error:', err);
         res.status(500).json({ message: 'Error fetching session' });
+    }
+};
+
+
+// GET /inventory/session/:sessionId/antibiotic-matches
+// Runs the antibiotic-sales fuzzy matcher on an uploaded pharmacy session.
+// Returns JSON plus CSV-ready rows so downstream Python jobs can persist directly.
+exports.getAntibioticMatchesForSession = async (req, res) => {
+    try {
+        const salesRows = await pharmacySaleModel.find({
+            uploadSessionId: req.params.sessionId,
+        }).lean();
+
+        if (salesRows.length === 0) {
+            return res.status(404).json({ message: 'No records found for this session' });
+        }
+
+        const antibioticRecords = await fetchAntibioticReferenceRecords();
+
+        if (antibioticRecords.length === 0) {
+            return res.status(404).json({
+                message: 'No antibiotic reference records found in antibiotic_master.',
+            });
+        }
+
+        const aiResponse = await sendAntibioticRowsToAI(
+            String(salesRows[0].pharmacyId),
+            req.params.sessionId,
+            salesRows,
+            antibioticRecords,
+        );
+
+        if (!aiResponse) {
+            return res.status(503).json({
+                message: 'Antibiotic matching is temporarily unavailable.',
+            });
+        }
+
+        res.status(200).json({
+            message: 'Antibiotic matching complete.',
+            ...aiResponse,
+        });
+    } catch (err) {
+        console.error('getAntibioticMatchesForSession error:', err);
+        res.status(500).json({ message: 'Error running antibiotic matching' });
     }
 };

@@ -16,5 +16,6 @@ const upload = multer({
 router.post('/upload',            verifyToken, authorize('pharmacy'), upload.single('file'), inventory.uploadInventory);
 router.get('/my-uploads',         verifyToken, authorize('pharmacy'), inventory.getMyUploads);
 router.get('/session/:sessionId', verifyToken, inventory.getSession);
+router.get('/session/:sessionId/antibiotic-matches', verifyToken, inventory.getAntibioticMatchesForSession);
 
 module.exports = router;

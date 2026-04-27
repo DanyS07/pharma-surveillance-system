@@ -68,6 +68,8 @@ function App() {
                     <Route element={<PrivateRoutes allowedRoles={['admin']} />}>
                         <Route path="/admin/dashboard"  element={<AdminDashboard />} />
                         <Route path="/admin/pharmacies" element={<AdminPharmacies />} />
+                        <Route path="/admin/pharmacies/:id" element={<PharmacyDetail />} />
+                        <Route path="/admin/session/:sessionId" element={<SessionView />} />
                         <Route path="/admin/officers"   element={<AdminOfficers />} />
                         <Route path="/admin/nsq"        element={<NSQMasterList />} />
                         <Route path="/admin/alerts"     element={<AdminAlerts />} />

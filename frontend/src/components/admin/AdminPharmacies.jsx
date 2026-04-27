@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Box from '@mui/material/Box'; import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper'; import Button from '@mui/material/Button';
 import Table from '@mui/material/Table'; import TableBody from '@mui/material/TableBody';
@@ -93,6 +94,10 @@ const AdminPharmacies = () => {
                                         )}
                                         {p.status === 'active' && (
                                             <>
+                                                <Button component={Link} to={`/admin/pharmacies/${p._id}`} size="small" variant="outlined"
+                                                    sx={{ borderRadius: '999px', borderColor: '#e5e7eb', color: '#374151', fontSize: '0.72rem' }}>
+                                                    View Inventory
+                                                </Button>
                                                 <Button size="small" variant="outlined" onClick={() => setAssignTarget(p)}
                                                     sx={{ borderRadius: '999px', borderColor: '#e5e7eb', color: '#374151', fontSize: '0.72rem' }}>Assign Officer</Button>
                                                 <Button size="small" variant="outlined" onClick={() => setConfirm({ type: 'suspend', id: p._id, name: p.name })}

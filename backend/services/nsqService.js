@@ -89,7 +89,7 @@ function buildAIPayload(pharmacyId, sessionId, matchedRows, nsqRecords) {
 
 
 // ── SEND TO AI MICROSERVICE ───────────────────────────────────────
-// POSTs the minimal payload to Python AI at POST /validate-nsq.
+// POSTs the minimal payload to Python AI at POST /api/nsq/validate-nsq.
 // Returns the results array on success, null if AI is unreachable.
 //
 // AI returns per row:
@@ -99,7 +99,7 @@ async function sendToAI(pharmacyId, sessionId, matchedRows, nsqRecords) {
     try {
         const payload  = buildAIPayload(pharmacyId, sessionId, matchedRows, nsqRecords);
         const response = await axios.post(
-            `${process.env.AI_SERVICE_URL}/validate-nsq`,
+            `${process.env.AI_SERVICE_URL}/api/nsq/validate-nsq`,
             payload,
             {
                 headers: {
@@ -153,7 +153,10 @@ async function processAIResults(aiResults, sessionId, pharmacyId) {
                     batchNumber:     result.batchNumber,
                     drugName:        result.drugName,
                 },
-                { nsqStatus: result.result },
+                {
+                    nsqStatus: result.result,
+                    similarityScore: result.similarityScore ?? null,
+                },
                 { session }
             );
 
@@ -192,7 +195,7 @@ async function processAIResults(aiResults, sessionId, pharmacyId) {
         // Rows AI did not return a result for = no name match = SAFE
         await pharmacySaleModel.updateMany(
             { uploadSessionId: sessionId, nsqStatus: 'pending' },
-            { nsqStatus: 'SAFE' },
+            { nsqStatus: 'SAFE', similarityScore: null },
             { session }
         );
 

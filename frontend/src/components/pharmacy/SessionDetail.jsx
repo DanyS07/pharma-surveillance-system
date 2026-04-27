@@ -1,51 +1,87 @@
-import React, { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
-import Box from '@mui/material/Box'; import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper'; import Button from '@mui/material/Button';
-import Table from '@mui/material/Table'; import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell'; import TableHead from '@mui/material/TableHead'; import TableRow from '@mui/material/TableRow';
-import AppLayout from '../AppLayout'; import StatusBadge from '../StatusBadge'; import axiosInstance from '../../axiosInstance';
+import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
+import Paper from '@mui/material/Paper'
+import Button from '@mui/material/Button'
+import Table from '@mui/material/Table'
+import TableBody from '@mui/material/TableBody'
+import TableCell from '@mui/material/TableCell'
+import TableHead from '@mui/material/TableHead'
+import TableRow from '@mui/material/TableRow'
+import Slider from '@mui/material/Slider'
+import AppLayout from '../AppLayout'
+import StatusBadge from '../StatusBadge'
+import axiosInstance from '../../axiosInstance'
 
-const MONTHS = ['','January','February','March','April','May','June','July','August','September','October','November','December'];
+const MONTHS = ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July',
+    'August', 'September', 'October', 'November', 'December']
 
 const SessionDetail = () => {
-    const { sessionId } = useParams();
-    const [records, setRecords] = useState([]);
-    useEffect(() => { axiosInstance.get(`/inventory/session/${sessionId}`).then(r => setRecords(r.data.records || [])).catch(console.error); }, [sessionId]);
+    const { sessionId } = useParams()
+    const [records, setRecords] = useState([])
+    const [sliderValue, setSliderValue] = useState(30)
 
-    const nsqCount = records.filter(r => r.nsqStatus === 'NSQ_CONFIRMED').length;
-    const sample   = records[0];
-    const period   = sample?.saleMonth ? `${MONTHS[sample.saleMonth]} ${sample.saleYear}` : '';
+    useEffect(() => {
+        axiosInstance.get(`/inventory/session/${sessionId}`)
+            .then(r => setRecords(r.data.records || []))
+            .catch(console.error)
+    }, [sessionId])
+
+    const nsqCount = records.filter(r => r.nsqStatus === 'NSQ_CONFIRMED').length
+    const probableCount = records.filter(r => r.nsqStatus === 'PROBABLE_MATCH').length
+    const sample = records[0]
+    const period = sample?.saleMonth ? `${MONTHS[sample.saleMonth]} ${sample.saleYear}` : ''
+    const visibleRecords = records.filter(r =>
+        r.nsqStatus === 'NSQ_CONFIRMED' ||
+        (r.nsqStatus === 'PROBABLE_MATCH' && Number(r.similarityScore || 0) >= sliderValue)
+    )
 
     return (
         <AppLayout>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 3.5 }}>
                 <Box>
-                    <Typography component={Link} to="/pharmacy/uploads"
-                        sx={{ fontSize: '0.82rem', color: '#9ca3af', textDecoration: 'none', '&:hover': { color: '#111827' } }}>
-                        ← Back to uploads
+                    <Typography
+                        component={Link}
+                        to="/pharmacy/uploads"
+                        sx={{ fontSize: '0.82rem', color: '#9ca3af', textDecoration: 'none', '&:hover': { color: '#111827' } }}
+                    >
+                        Back to uploads
                     </Typography>
                     <Typography variant="h5" sx={{ fontWeight: 800, letterSpacing: '-0.02em', mt: 1 }}>
-                        Session Detail {period && `— ${period}`}
+                        Session Detail {period && `- ${period}`}
                     </Typography>
-                    <Typography sx={{ fontFamily: 'monospace', fontSize: '0.72rem', color: '#9ca3af', mt: 0.3 }}>{sessionId}</Typography>
+                    <Typography sx={{ fontFamily: 'monospace', fontSize: '0.72rem', color: '#9ca3af', mt: 0.3 }}>
+                        {sessionId}
+                    </Typography>
                 </Box>
-                <Button variant="outlined" onClick={() => window.print()}
-                    sx={{ borderRadius: '999px', borderColor: '#e5e7eb', color: '#374151', fontSize: '0.85rem' }}>
-                    🖨 Print / Export PDF
+                <Button
+                    variant="outlined"
+                    onClick={() => window.print()}
+                    sx={{ borderRadius: '999px', borderColor: '#e5e7eb', color: '#374151', fontSize: '0.85rem' }}
+                >
+                    Print / Export PDF
                 </Button>
             </Box>
 
-            {/* Summary cards */}
             <Box sx={{ display: 'flex', gap: 2, mb: 3 }}>
                 {[
                     { label: 'Total Rows', value: records.length, color: '#111827' },
                     { label: 'NSQ Confirmed', value: nsqCount, color: nsqCount > 0 ? '#dc2626' : '#059669' },
+                    { label: 'Probable Match', value: probableCount, color: probableCount > 0 ? '#c2410c' : '#059669' },
                     { label: 'Safe', value: records.filter(r => r.nsqStatus === 'SAFE').length, color: '#059669' },
-                ].map(c => (
-                    <Paper key={c.label} elevation={0} sx={{ flex: 1, border: '1px solid #e5e7eb', borderRadius: '12px', p: '16px 20px', textAlign: 'center' }}>
-                        <Typography sx={{ fontSize: '1.6rem', fontWeight: 800, color: c.color }}>{c.value}</Typography>
-                        <Typography sx={{ fontSize: '0.72rem', color: '#9ca3af', mt: 0.3 }}>{c.label}</Typography>
+                ].map(card => (
+                    <Paper
+                        key={card.label}
+                        elevation={0}
+                        sx={{ flex: 1, border: '1px solid #e5e7eb', borderRadius: '12px', p: '16px 20px', textAlign: 'center' }}
+                    >
+                        <Typography sx={{ fontSize: '1.6rem', fontWeight: 800, color: card.color }}>
+                            {card.value}
+                        </Typography>
+                        <Typography sx={{ fontSize: '0.72rem', color: '#9ca3af', mt: 0.3 }}>
+                            {card.label}
+                        </Typography>
                     </Paper>
                 ))}
             </Box>
@@ -53,37 +89,80 @@ const SessionDetail = () => {
             {nsqCount > 0 && (
                 <Box sx={{ backgroundColor: '#fee2e2', border: '1px solid #fca5a5', borderRadius: '12px', px: 2.5, py: 1.8, mb: 3 }}>
                     <Typography sx={{ color: '#7f1d1d', fontSize: '0.9rem', fontWeight: 500 }}>
-                        ⚠️ {nsqCount} batch{nsqCount !== 1 ? 'es' : ''} confirmed NSQ. Your Drug Control Officer has been notified.
+                        {nsqCount} batch{nsqCount !== 1 ? 'es' : ''} confirmed NSQ. Your Drug Control Officer has been notified.
                     </Typography>
                 </Box>
             )}
 
+            <Paper elevation={0} sx={{ border: '1px solid #e5e7eb', borderRadius: '12px', p: 2.5, mb: 3 }}>
+                <Typography sx={{ fontWeight: 700, fontSize: '0.95rem', mb: 0.5 }}>
+                    Match Filter
+                </Typography>
+                <Typography sx={{ color: '#6b7280', fontSize: '0.84rem', mb: 2 }}>
+                    Always show NSQ confirmed rows. Show probable matches only when similarity score is at least {sliderValue}.
+                </Typography>
+                <Slider
+                    min={30}
+                    max={100}
+                    step={1}
+                    value={sliderValue}
+                    onChange={(_, value) => setSliderValue(value)}
+                    valueLabelDisplay="auto"
+                    marks={[{ value: 30, label: '30' }, { value: 80, label: '80' }, { value: 100, label: '100' }]}
+                />
+                <Typography sx={{ color: '#9ca3af', fontSize: '0.78rem', mt: 1 }}>
+                    Visible results: {visibleRecords.length}
+                </Typography>
+            </Paper>
+
             <Paper elevation={0} sx={{ border: '1px solid #e5e7eb', borderRadius: '12px', overflow: 'hidden' }}>
                 <Table size="small">
-                    <TableHead><TableRow sx={{ backgroundColor: '#f9fafb' }}>
-                        {['Drug Name','Batch No.','Manufacturer','Expiry','Qty','NSQ Status'].map(h => (
-                            <TableCell key={h} sx={{ fontWeight: 600, fontSize: '0.7rem', color: '#9ca3af', textTransform: 'uppercase', letterSpacing: '0.04em', py: 1.5 }}>{h}</TableCell>
-                        ))}
-                    </TableRow></TableHead>
+                    <TableHead>
+                        <TableRow sx={{ backgroundColor: '#f9fafb' }}>
+                            {['Drug Name', 'Batch No.', 'Manufacturer', 'Expiry', 'Qty', 'Score', 'NSQ Status'].map(header => (
+                                <TableCell
+                                    key={header}
+                                    sx={{ fontWeight: 600, fontSize: '0.7rem', color: '#9ca3af', textTransform: 'uppercase', letterSpacing: '0.04em', py: 1.5 }}
+                                >
+                                    {header}
+                                </TableCell>
+                            ))}
+                        </TableRow>
+                    </TableHead>
                     <TableBody>
-                        {records.map(r => (
-                            <TableRow key={r._id}
-                                sx={{ backgroundColor: r.nsqStatus === 'NSQ_CONFIRMED' ? '#fff5f5' : 'inherit',
-                                      '&:hover': { backgroundColor: r.nsqStatus === 'NSQ_CONFIRMED' ? '#fee2e2' : '#f9fafb' },
-                                      '&:last-child td': { border: 0 } }}>
-                                <TableCell sx={{ fontWeight: r.nsqStatus === 'NSQ_CONFIRMED' ? 700 : 400, fontSize: '0.88rem' }}>{r.drugName}</TableCell>
-                                <TableCell sx={{ fontFamily: 'monospace', fontSize: '0.78rem' }}>{r.batchNumber}</TableCell>
-                                <TableCell sx={{ color: '#6b7280', fontSize: '0.82rem' }}>{r.manufacturer || '—'}</TableCell>
-                                <TableCell sx={{ fontSize: '0.78rem', color: '#9ca3af' }}>{r.expiryDate || '—'}</TableCell>
-                                <TableCell sx={{ fontSize: '0.85rem' }}>{r.quantity}</TableCell>
-                                <TableCell><StatusBadge status={r.nsqStatus} /></TableCell>
+                        {visibleRecords.length === 0 ? (
+                            <TableRow>
+                                <TableCell colSpan={7} sx={{ textAlign: 'center', py: 5, color: '#9ca3af' }}>
+                                    No NSQ confirmed or probable matches meet the current slider filter.
+                                </TableCell>
+                            </TableRow>
+                        ) : visibleRecords.map(record => (
+                            <TableRow
+                                key={record._id}
+                                sx={{
+                                    backgroundColor: record.nsqStatus === 'NSQ_CONFIRMED' ? '#fff5f5' : 'inherit',
+                                    '&:hover': { backgroundColor: record.nsqStatus === 'NSQ_CONFIRMED' ? '#fee2e2' : '#f9fafb' },
+                                    '&:last-child td': { border: 0 },
+                                }}
+                            >
+                                <TableCell sx={{ fontWeight: record.nsqStatus === 'NSQ_CONFIRMED' ? 700 : 400, fontSize: '0.88rem' }}>
+                                    {record.drugName}
+                                </TableCell>
+                                <TableCell sx={{ fontFamily: 'monospace', fontSize: '0.78rem' }}>{record.batchNumber}</TableCell>
+                                <TableCell sx={{ color: '#6b7280', fontSize: '0.82rem' }}>{record.manufacturer || '-'}</TableCell>
+                                <TableCell sx={{ fontSize: '0.78rem', color: '#9ca3af' }}>{record.expiryDate || '-'}</TableCell>
+                                <TableCell sx={{ fontSize: '0.85rem' }}>{record.quantity}</TableCell>
+                                <TableCell sx={{ fontFamily: 'monospace', fontSize: '0.78rem' }}>
+                                    {typeof record.similarityScore === 'number' ? record.similarityScore.toFixed(2) : '-'}
+                                </TableCell>
+                                <TableCell><StatusBadge status={record.nsqStatus} /></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
                 </Table>
             </Paper>
         </AppLayout>
-    );
-};
+    )
+}
 
-export default SessionDetail;
+export default SessionDetail

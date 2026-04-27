@@ -15,22 +15,22 @@ async def lifespan(app: FastAPI):
     Shutdown → close MongoDB connection cleanly
     """
     # STARTUP
-    print("🚀 Starting NSQ Detection Service...")
+    print("Starting NSQ Detection Service...")
     try:
         from app.database import ping_db, client
         ping_db()
     except Exception as e:
-        print(f"⚠️  MongoDB not connected: {e}")
-        print("   Service running without DB — use JSON payload mode")
+        print(f"Warning: MongoDB not connected: {e}")
+        print("Service running without DB - use JSON payload mode")
 
-    yield  # ← service runs here
+    yield
 
     # SHUTDOWN
-    print("🛑 Shutting down NSQ Detection Service...")
+    print("Shutting down NSQ Detection Service...")
     try:
         from app.database import client
         client.close()
-        print("✅ MongoDB connection closed")
+        print("MongoDB connection closed")
     except:
         pass
 
@@ -59,7 +59,9 @@ app.add_middleware(
 )
 
 # ── Register Routes ──────────────────────────────────────────────────────────
+from app.routes.antibiotic_matching import router as antibiotic_router
 from app.routes.nsq_matching import router as nsq_router
+app.include_router(antibiotic_router)
 app.include_router(nsq_router)
 
 # ── Root Endpoint ─────────────────────────────────────────────────────────────
@@ -71,5 +73,6 @@ async def root():
         "status"     : "running",
         "docs"       : "/docs",
         "health"     : "/api/nsq/health",
-        "main_endpoint": "POST /api/nsq/analyse",
+        "main_endpoint": "POST /api/nsq/validate-nsq",
+        "antibiotic_endpoint": "POST /api/antibiotic/match-sales",
     }

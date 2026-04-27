@@ -28,6 +28,7 @@ const pharmacySaleSchema = new mongoose.Schema({
     // Optional — stored if present in CSV, ignored if absent
     unitPrice:        { type: Number, default: 0  },  // price per unit
     pharmacyRecordId: { type: String, default: '' },  // pharmacy's internal record ID (REC0001)
+    similarityScore:  { type: Number, default: null }, // AI fuzzy-match score for matched rows
 
     // NSQ match result — written back after AI validation completes
     // pending        → not yet checked
