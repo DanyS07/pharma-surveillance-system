@@ -1,0 +1,211 @@
+record_id,drug_name,batch_number,quantity_sold,unit_price,month,year
+REC0001,Folic Acid 5mg Tablets,FLC-2026-020,194,48.7,January,2026
+REC0002,Zinc Sulphate Dispersible Tablets IP,ZST21054,22,417.39,January,2026
+REC0003,Cefixime 200mg Tablets,CFX-2026-014,15,275.66,January,2026
+REC0004,Multivitamin Capsules,MTV-2026-022,22,147.38,January,2026
+REC0005,Salbutamol Inhaler 100mcg,SLB-2026-015,239,278.91,January,2026
+REC0006,Ondansetron 4mg Tablets,OND-2026-026,93,51.26,January,2026
+REC0007,Bupropion Hydrochloride Extended Release Tab USP 150 mg (BUPIDEP-150 ER TABLETS),CT-12330321,92,85.41,January,2026
+REC0008,misoprostol tablets i.p. 200 mcg,CHT-1086,215,81.72,January,2026
+REC0009,Montelukast 10mg Tablets,MNT-2026-016,19,157.32,January,2026
+REC0010,Pantoprazole 40mg Tablets,PAN-2026-009,107,193.62,January,2026
+REC0011,Telmisartan 40mg Tablets,TLM-2026-018,267,494.37,January,2026
+REC0012,Amlodipine 5mg Tablets,AML-2026-003,159,115.93,January,2026
+REC0013,Amoxicillin 500mg Capsules,AMX-2026-011,97,48.25,January,2026
+REC0014,Tramadol Hydrochloride and Acetaminophen Tab USP (DOLOSAFE D TABLETS),NDSD-02102,184,164.34,January,2026
+REC0015,Salbutamol Inhaler 100mcg,SLB-2026-015,24,463.12,January,2026
+REC0016,Cetirizine 10mg Tablets,CET-2026-007,92,128.15,January,2026
+REC0017,Rosuvastatin 10mg Tablets,RSV-2026-019,96,280.96,January,2026
+REC0018,TRANEXAMIC ACID TABLETS IP,T2002047,189,461.54,January,2026
+REC0019,Omeprazole 20mg Capsules,OMP-2026-005,217,198.21,January,2026
+REC0020,Aspirin 75mg Tablets,ASP-2026-024,14,271.37,January,2026
+REC0021,Vitamin D3 60000 IU Capsules,VTD-2026-010,282,149.93,January,2026
+REC0022,Atorvastatin 10mg Tablets,ATV-2026-002,117,321.77,January,2026
+REC0023,B-COMPLEX TABLETS NFI,T-17377,238,340.41,January,2026
+REC0024,Metformin 500mg Tablets,MFR-2026-001,262,103.75,January,2026
+REC0025,Domperidone 10mg Tablets,DMP-2026-027,298,39.93,January,2026
+REC0026,Losartan 50mg Tablets,LOS-2026-004,141,422.18,January,2026
+REC0027,Asmol-500,T-18043,264,163.64,January,2026
+REC0028,ENTERIC COATED RABEPRAZOLE SODIUM AND SUSTAINED RELEASE DOMPERIDONE CAPSULES (RABMARQU-DSR CAPSULES ),AL/B/124,289,378.11,January,2026
+REC0029,Telmisartan 40mg Tablets,TLM-2026-018,221,363.34,January,2026
+REC0030,Albendazole Tab I.P. 400mg. (Zenebend),GLL18001,204,445.01,January,2026
+REC0031,Albendazole 400mg Tablets,ALB-2026-029,209,356.56,January,2026
+REC0032,radin syrup (ranitidine oral solution i.p.),S18J025,37,152.61,January,2026
+REC0033,Losartan 50mg Tablets,LOS-2026-004,67,67.96,January,2026
+REC0034,Eryfast-250,MD926,27,378.41,January,2026
+REC0035,Metformin 500mg Tablets,MFR-2026-001,272,354.15,January,2026
+REC0036,Moxmed-500,KC21103,86,468.18,January,2026
+REC0037,ISO PROPYL ALCOHOL IP,IPA/GCPL/532,114,123.35,January,2026
+REC0038,Metformin 500mg Tablets,MFR-2026-001,282,244.63,January,2026
+REC0039,Atorvadoc 20 (Atorvastatin Tablets I.P. 20 mg),MFT720,229,347.77,January,2026
+REC0040,Domperidone 10mg Tablets,DMP-2026-027,34,370.34,January,2026
+REC0041,Vitamin C 500mg Tablets,CY039,71,326.37,January,2026
+REC0042,Folic Acid 5mg Tablets,FLC-2026-020,265,487.48,January,2026
+REC0043,Paracetamol 500mg Tablets,PCT-2026-028,284,263.18,January,2026
+REC0044,Levocetirizine 5mg Tablets,LVZ-2026-025,98,276.03,January,2026
+REC0045,Aspirin 75mg Tablets,ASP-2026-024,102,89.48,January,2026
+REC0046,OLANZAPINE Tab I.P. 5 mg,T0434,182,326.67,January,2026
+REC0047,Vitamin D3 60000 IU Capsules,VTD-2026-010,67,155.5,January,2026
+REC0048,"calamine, diphenhydramine hydrochloride and camphor lotion nanzidryl lotion",NYL-002,37,327.79,January,2026
+REC0049,Telmisartan 40mg Tablets,TLM-2026-018,68,141.28,January,2026
+REC0050,Levocetirizine 5mg Tablets,LVZ-2026-025,239,262.32,January,2026
+REC0051,Telmisartan 40mg Tablets,TLM-2026-018,94,382.07,January,2026
+REC0052,Amlodipine Besilate Tab IP 5 mg (AMLORACE-5),GLL19018,122,426.32,January,2026
+REC0053,"IRON & FOLIC ACID SYRUP IP, 50 ML",AHL21034,292,292.48,January,2026
+REC0054,Aspirin 75mg Tablets,ASP-2026-024,200,138.66,January,2026
+REC0055,Pantoprazole 40mg Tablets,PAN-2026-009,209,158.99,January,2026
+REC0056,Vitamin D3 60000 IU Capsules,VTD-2026-010,65,180.42,January,2026
+REC0057,RAMIPRIL TABLTS IP 2.5MG,STN-181394A,237,326.38,January,2026
+REC0058,Paracetamol 500mg Tablets,PCT-2026-028,255,76.99,January,2026
+REC0059,Dolo 650 Paracetamol Tablets,DOL-2026-008,34,485.39,January,2026
+REC0060,Rosuvastatin 10mg Tablets,RSV-2026-019,210,205.73,January,2026
+REC0061,Metformin 500mg Tablets,MFR-2026-001,53,182.98,January,2026
+REC0062,Omeprazole 20mg Capsules,OMP-2026-005,142,171.2,January,2026
+REC0063,Amoxicillin 500mg Capsules,AMX-2026-011,250,135.12,January,2026
+REC0064,Pantoprazole 40mg Tablets,PAN-2026-009,120,92.49,January,2026
+REC0065,Cefixime 200mg Tablets,CFX-2026-014,66,346.37,January,2026
+REC0066,CSP (Cough Syp for Throat & Chesty Coughs) 100 ml,LOCG21-85,269,448.36,January,2026
+REC0067,Glimepiride 2mg Tablets,GLM-2026-017,282,55.07,January,2026
+REC0068,ONDASETRON TABLETS IP 4 MG,T351001,106,131.44,January,2026
+REC0069,Paracetamol Tab IP 500 mg (PECEMOL TABLETS),"AHT-1239,",12,211.7,January,2026
+REC0070,Co-trimoxazole Tablets IP SS,CM-121,101,247.08,January,2026
+REC0071,Remdesivir For Injection 100 mg/vial,REM121006A,162,278.59,January,2026
+REC0072,PARACETAMOL TABLETS I.P. 500 MG,PTTV-38,66,268.35,January,2026
+REC0073,Rosuvastatin 10mg Tablets,RSV-2026-019,215,432.84,January,2026
+REC0074,Amoxicillin 500mg Capsules,AMX-2026-011,59,438.25,January,2026
+REC0075,Metronidazole 400mg Tablets,MTZ-2026-013,93,15.15,January,2026
+REC0076,Amoxicillin 500mg Capsules,AMX-2026-011,10,317.65,January,2026
+REC0077,Dolo 650 Paracetamol Tablets,DOL-2026-008,224,258.94,January,2026
+REC0078,Multivitamin Capsules,MTV-2026-022,216,324.2,January,2026
+REC0079,Ibuprofen 400mg Tablets,IBU-2026-012,124,285.18,January,2026
+REC0080,Cefixime 200mg Tablets,CFX-2026-014,149,350.7,January,2026
+REC0081,Diclofenac Sodium Tablets I.P. 50 mg,1508318,261,352.18,January,2026
+REC0082,Hydrocortisone Sodium Succinate Inj I.P. (HCORT),UNI-231,204,143.68,January,2026
+REC0083,Glimepiride 2mg Tablets,GLM-2026-017,268,113.53,January,2026
+REC0084,Dried Ferrous Sulphate & Folic Acid Tablets IP,TE22-24,61,314.18,January,2026
+REC0085,Omeprazole 20mg Capsules,OMP-2026-005,19,444.72,January,2026
+REC0086,Omirid-10 (Omeprazole Capsules IP),OMI-2101,56,392.95,January,2026
+REC0087,Trimetazidine Dihydrochloride Tablets IP,TDN003,85,182.33,January,2026
+REC0088,Calcium Carbonate 500mg Tablets,CAL-2026-021,277,311.47,January,2026
+REC0089,Montelukast 10mg Tablets,MNT-2026-016,16,245.53,January,2026
+REC0090,Domperidone 10mg Tablets,DMP-2026-027,221,335.07,January,2026
+REC0091,Pantoprazole 40mg Tablets,PAN-2026-009,174,486.4,January,2026
+REC0092,Azithromycin Oral Susp IP 200 mg/ 5 ml,AYA-2101,268,136.83,January,2026
+REC0093,JFIX-LB (Cefixime Trihydrate with Lactic Acid Tablets IP),HS.114,299,387.07,January,2026
+REC0094,Multivitamin Capsules,MTV-2026-022,291,75.29,January,2026
+REC0095,Omeprazole 20mg Capsules,OMP-2026-005,132,72,January,2026
+REC0096,BUPRENORPHINE INJECTION I.P.,LM 18870,34,57.26,January,2026
+REC0097,Multivitamin Capsules,MTV-2026-022,82,464.34,January,2026
+REC0098,Ropula Injection-20 ml (Propofol Emulsion for Injection IP 10mg/ml),NADPF1C,298,397.98,January,2026
+REC0099,Glimepiride 2mg Tablets,GLM-2026-017,96,164.19,January,2026
+REC0100,Chlordiazepoxide 5 mg & Amitriptyline Hydrocholoride 12.5mg Tab USP Libotryp,D2050026,217,150.96,January,2026
+REC0101,Telmisartan 40mg Tablets,TLM-2026-018,187,72.71,January,2026
+REC0102,Glimepiride 2mg Tablets,GLM-2026-017,6,422.54,January,2026
+REC0103,Cefixime 200mg Tablets,CFX-2026-014,292,172.54,January,2026
+REC0104,Ondero Met 2.5mg /500 mg (Fixed Dose Combination of Linagliptin and Metformin Hydrochloride Tab),C99671,161,101.73,January,2026
+REC0105,LVCIPRO 500 - TABLETS (CIPROFLOXACIN HYDROCHLORIDE TABLETS IP),LV22CT-691,197,16.92,January,2026
+REC0106,Cefixime 200mg Tablets,CFX-2026-014,174,39.42,January,2026
+REC0107,Linezolid Tablets I.P. 600 mg,GT200228,284,393.82,January,2026
+REC0108,Ibuprofen 400mg Tablets,IBU-2026-012,140,77.6,January,2026
+REC0109,"Trypsin, Bromelain & Rutoside Trihydrate Tab",GT200466,40,278.2,January,2026
+REC0110,(panchvati hand cleanser gel),HCG.106,81,264.82,January,2026
+REC0111,iso propyl alcohol ip,IPA/GCPL/532,98,480.99,January,2026
+REC0112,Ondansetron 4mg Tablets,OND-2026-026,200,114.31,January,2026
+REC0113,"DICLOFENAC, VIRGIN LINSEED OIL, METHYL SALICYLATE AND MENTHOL GEL",JZAA02,52,10.1,January,2026
+REC0114,Calcium Carbonate 500mg Tablets,CAL-2026-021,114,24.15,January,2026
+REC0115,LTIRA ? 250 (LEVETIRACETAM TABLETS IP 250 MG),T22026,105,327.14,January,2026
+REC0116,Diclofenac Sodium 50mg Tablets,DCL-2026-023,184,210.75,January,2026
+REC0117,Multivitamin Capsules,MTV-2026-022,171,188.24,January,2026
+REC0118,Folic Acid 5mg Tablets,FLC-2026-020,255,165.79,January,2026
+REC0119,Sterile Hypodermic Syringe,19502,222,422.8,January,2026
+REC0120,Paracetamol Tablets I.P. 650 mg,BTPM110,142,338.45,January,2026
+REC0121,Alprasafe - 0.5,PE25AD01,163,70.28,January,2026
+REC0122,Losartan 50mg Tablets,LOS-2026-004,173,486.43,January,2026
+REC0123,Salbutamol Inhaler 100mcg,SLB-2026-015,79,277.11,January,2026
+REC0124,Multivitamin Capsules,MTV-2026-022,282,345.04,January,2026
+REC0125,Levocetirizine 5mg Tablets,LVZ-2026-025,258,391.2,January,2026
+REC0126,Albendazole 400mg Tablets,ALB-2026-029,133,27.99,January,2026
+REC0127,Levocetirizine 5mg Tablets,LVZ-2026-025,157,490.71,January,2026
+REC0128,Ondansetron 4mg Tablets,OND-2026-026,252,175.99,January,2026
+REC0129,"Paracetamol, Phenylephrine Hydrochloride and Chlorpheniramine Maleate Syrup (COLDBEST-PC SYRUP)",DL5028,28,327.63,January,2026
+REC0130,Multivitamin Capsules,MTV-2026-022,113,192.45,January,2026
+REC0131,Calcium Carbonate 500mg Tablets,CAL-2026-021,268,411.73,January,2026
+REC0132,Cotton Gauze Absorbent (Non- Sterilized),G-022,72,479.56,January,2026
+REC0133,Telmisartan Tablets IP 40 mg,TETY-01,142,14.55,January,2026
+REC0134,Folic Acid & Ferrous Sulphate Tablets I.P. (IFA Large),84,18,22.54,January,2026
+REC0135,Amoxicillin 500mg Capsules,AMX-2026-011,115,301.09,January,2026
+REC0136,enalapril maleate tablets i.p. 5mg,T012001,110,222.47,January,2026
+REC0137,prednisolone sodium phosphate ip,702620,210,222.2,January,2026
+REC0138,Azithromycin 500mg Tablets,AZI-2026-006,32,378.17,January,2026
+REC0139,Diclofenac Sodium 50mg Tablets,DCL-2026-023,78,74.32,January,2026
+REC0140,Pantoprazole 40mg Tablets,PAN-2026-009,75,472.67,January,2026
+REC0141,Vitamin B Complex Tablets,VTB-2026-030,179,178.34,January,2026
+REC0142,Paracetamol 500mg Tablets,PCT-2026-028,162,290.59,January,2026
+REC0143,Telmisartan 40mg Tablets,TLM-2026-018,173,340.32,January,2026
+REC0144,Heparin Injection IP 25000 units (AZZIRIN INJECTION ),MCP19388,194,57.36,January,2026
+REC0145,ALBITHRAL 500 (AZITHROMYCIN TABLETS IP),DD21007,259,405.9,January,2026
+REC0146,Rosuvastatin 10mg Tablets,RSV-2026-019,217,418.13,January,2026
+REC0147,nexofol injecion (propofol emulsion for injection ip 10 mg/ml),PNL-220507,253,238.66,January,2026
+REC0148,Cefotaxime Sodium Injection IP 250 mg,322,136,213.12,January,2026
+REC0149,Diclofenac Sodium Tablets I.P.,DF-R008,99,326.51,January,2026
+REC0150,Omeprazole 20mg Capsules,G-215,74,277.44,January,2026
+REC0151,Salbutamol Inhaler 100mcg,SLB-2026-015,181,50.45,January,2026
+REC0152,Dolo 650 Paracetamol Tablets,DOL-2026-008,188,344.93,January,2026
+REC0153,Vitamin B Complex Tablets,VTB-2026-030,257,207.5,January,2026
+REC0154,Amoxicillin 500mg Capsules,AMX-2026-011,292,37.51,January,2026
+REC0155,Amoxicillin 500mg Capsules,AMX-2026-011,138,162.11,January,2026
+REC0156,Losartan 50mg Tablets,LOS-2026-004,77,368.96,January,2026
+REC0157,Amoxicillin 500mg Capsules,AMX-2026-011,265,29.73,January,2026
+REC0158,Albendazole Tablets I.P. 400 mg,ABT18036,114,289.22,January,2026
+REC0159,Paracetamol 500mg Tablets,PCT-2026-028,133,200.63,January,2026
+REC0160,Metformin 500mg Tablets,MFR-2026-001,219,31.79,January,2026
+REC0161,AMOXYCILLIN & POTASSIUM CLAVULANATE TABLETS I.P. 625 MG,17,239,459.24,January,2026
+REC0162,Amoxicillin 500mg Capsules,AMX-2026-011,258,455.19,January,2026
+REC0163,Salbutamol Inhaler 100mcg,SLB-2026-015,190,355.47,January,2026
+REC0164,Metronidazole 400mg Tablets,MTZ-2026-013,80,121.85,January,2026
+REC0165,Metronidazole 400mg Tablets,MTZ-2026-013,280,481.94,January,2026
+REC0166,Calcium Carbonate 500mg Tablets,CAL-2026-021,19,218.14,January,2026
+REC0167,Calcium with Vitamin D3 Tablets,TAK8162AL,145,409.91,January,2026
+REC0168,Vitamin D3 60000 IU Capsules,VTD-2026-010,230,468.21,January,2026
+REC0169,GLIMEPIRIDE TABLETS I.P,HGMT18003,171,457.84,January,2026
+REC0170,DICLOFENAC SODIUM PROLONGED RELEASE TABLETS I.P.,IDM20020,263,152.43,January,2026
+REC0171,Cefixime Dispersible Tab (SAMCEF- 200DT TABLETS),TF19-88,172,344.57,January,2026
+REC0172,Ibuprofen 400mg Tablets,IBU-2026-012,280,93.73,January,2026
+REC0173,Multivitamin Capsules,MTV-2026-022,213,85.96,January,2026
+REC0174,Octt Hair Serum,3,35,381.97,January,2026
+REC0175,Glimepiride 2mg Tablets,GLM-2026-017,85,482.93,January,2026
+REC0176,Vitamin B Complex Tablets,VTB-2026-030,66,282.24,January,2026
+REC0177,Omeprazole 20mg Capsules,OMP-2026-005,101,488.3,January,2026
+REC0178,PROPOVEN INJECTION-20 ML (PROPOFOL EMULSION FOR INJECTION IP 10 MG/ML),NADPF1A,284,132.99,January,2026
+REC0179,Amoxicillin 500mg Capsules,AMX-2026-011,271,379.72,January,2026
+REC0180,Dolo 650 Paracetamol Tablets,DOL-2026-008,220,334.67,January,2026
+REC0181,Amoxycillin & Potassium Clavulanate Tablets I.P. 1000 mg,BT 180322,87,137.82,January,2026
+REC0182,DIACOWIN-PLUS Cap (Prebiotic & Probiotics Cap),521-263,228,93.92,January,2026
+REC0183,Diclofenac Sodium 50mg Tablets,DCL-2026-023,280,386.78,January,2026
+REC0184,Amlodipine 5mg Tablets,AML-2026-003,218,358.8,January,2026
+REC0185,"Orthorium - MSM (Diacerein, Glucosamine Sulphate & Methyl Sulfonyl Methane Tablets)",LOCG21-96,243,290.09,January,2026
+REC0186,Azithromycin 500mg Tablets,AZI-2026-006,242,117.88,January,2026
+REC0187,Cloxacillin Sodium Capsules IP 500 mg (CLOXRID-500 CAPSULES),CLO-2003,239,403.74,January,2026
+REC0188,Montelukast 10mg Tablets,MNT-2026-016,164,102.07,January,2026
+REC0189,co-trimoxazole tablets ip ss,CM-122,87,334,January,2026
+REC0190,Calcium Carbonate 500mg Tablets,CAL-2026-021,83,247.58,January,2026
+REC0191,Salbutamol Inhaler 100mcg,SLB-2026-015,92,355.7,January,2026
+REC0192,"Byzyme (Pepsin & Fungal Diastase Syp), 200ml",ZA20781,139,237.32,January,2026
+REC0193,Thirobal -5 (Carbimazole Tab I.P. 5 mg),T-01497,29,231.39,January,2026
+REC0194,Paracetamol 500mg Tablets,PCT-2026-028,136,171.1,January,2026
+REC0195,Dextromethorphan hydrobromide and Chlorpheniramine Maleate Syp (Heel-DX Syp),YHL-39,239,303.13,January,2026
+REC0196,Aspirin 75mg Tablets,ASP-2026-024,265,344.21,January,2026
+REC0197,Multivitamin Capsules,MTV-2026-022,142,170.04,January,2026
+REC0198,Ibuprofen 400mg Tablets,IBU-2026-012,243,107.38,January,2026
+REC0199,Paracetamol 500mg Tablets,PCT-2026-028,271,435.47,January,2026
+REC0200,Omeprazole 20mg Capsules,OMP-2026-005,186,302.51,January,2026
+REC0201,HYPROMELLOSE OPHTHALMIC SOLUTION USP,8B05170,284,466.77,January,2026
+REC0202,Vitamin D3 60000 IU Capsules,VTD-2026-010,96,78.2,January,2026
+REC0203,Amoxycillin & Potassium Clavulanate Tablets IP 625 mg (Amzeclav-625 Tablets),KPT-3348,161,258.77,January,2026
+REC0204,csp (cough syrup for throat & chesty coughs) 100 ml,LOCG21-96,217,435.34,January,2026
+REC0205,Telmisartan 40mg Tablets,TLM-2026-018,82,307.32,January,2026
+REC0206,DICLOFENAC SODIUM TABLETS I.P. 50mg,DF11,171,264.47,January,2026
+REC0207,Hypodermic Syringe 2ml.,19503,187,85.83,January,2026
+REC0208,Calcium Carbonate 500mg Tablets,CAL-2026-021,250,470.22,January,2026
+REC0209,Telmisartan 40mg Tablets,TLM-2026-018,134,73.99,January,2026
+REC0210,Salbutamol Inhaler 100mcg,SLB-2026-015,295,331.85,January,2026

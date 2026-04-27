@@ -1,0 +1,126 @@
+standard_name,brand_names,antibiotic_class,drug_group,common_forms,common_strengths,synonyms
+amoxicillin,Amoxil|Trimox|Moxatag,penicillin,antibiotic,capsule|tablet|syrup|suspension,125mg|250mg|500mg|875mg,amox|amoxycillin|amoxil|amx
+amoxicillin-clavulanate,Augmentin|Amoclav|Clavam|Augmox,penicillin,antibiotic,tablet|suspension|injection,375mg|625mg|1000mg|228mg/5ml,amox-clav|co-amoxiclav|augmentin|amloclav|amoxyclav
+ampicillin,Principen|Omnipen|Polycillin,penicillin,antibiotic,capsule|injection|suspension,250mg|500mg|1g|2g,amp|ampicillin sodium|ampi
+ampicillin-sulbactam,Unasyn|Sulbacin|Ampilox,penicillin,antibiotic,injection,1.5g|3g,amp-sulbactam|unasyn|sulbactam-ampicillin
+cloxacillin,Cloxapen|Orbenin|Clox,penicillin,antibiotic,capsule|injection|syrup,250mg|500mg|1g,clox|cloxacillin sodium
+dicloxacillin,Dynapen|Dycill|Pathocil,penicillin,antibiotic,capsule|suspension,125mg|250mg|500mg,diclox
+flucloxacillin,Floxapen|Fluclox|Staphcillin,penicillin,antibiotic,capsule|injection|syrup,250mg|500mg|1g,fluclox|floxacillin
+piperacillin-tazobactam,Tazocin|Zosyn|Pipzo,penicillin,antibiotic,injection,2.25g|3.375g|4.5g,pip-tazo|tazocin|piptaz|pip-taz
+benzylpenicillin,Penicillin G|Crystapen|Megacillin,penicillin,antibiotic,injection,0.6g|1.2g|2.4g,penicillin g|pen g|benzpenicillin
+phenoxymethylpenicillin,Penicillin V|Pen-Vee|Veetids,penicillin,antibiotic,tablet|syrup,125mg|250mg|500mg,penicillin v|pen v|phenoxypenicillin
+cefalexin,Keflex|Cephalexin|Ceporex,cephalosporin_1g,antibiotic,capsule|tablet|suspension,250mg|500mg|1g,cephalexin|cefalex|keflex|ceflex
+cefadroxil,Duricef|Cefadrox|Droxyl,cephalosporin_1g,antibiotic,capsule|tablet|suspension,250mg|500mg|1g,cefadroxil monohydrate|droxyl
+cefazolin,Kefzol|Ancef|Cefacidal,cephalosporin_1g,antibiotic,injection,0.5g|1g|2g,cefazolin sodium|ancef
+cefuroxime,Zinnat|Ceftin|Zinacef,cephalosporin_2g,antibiotic,tablet|injection|suspension,125mg|250mg|500mg|750mg|1.5g,cefuroxime axetil|zinnat|cefurox
+cefaclor,Ceclor|Distaclor|Keflor,cephalosporin_2g,antibiotic,capsule|tablet|suspension,125mg|250mg|375mg|500mg,cefaclor monohydrate|ceclor
+cefixime,Suprax|Taxim-O|Zifi|Topcef,cephalosporin_3g,antibiotic,tablet|capsule|suspension,100mg|200mg|400mg,cefixime trihydrate|taxim|zifi|cfx
+ceftriaxone,Rocephin|Monocef|Oframax|Xone,cephalosporin_3g,antibiotic,injection,250mg|500mg|1g|2g,ceftriaxone sodium|monocef|rocephin|ctrx
+cefotaxime,Claforan|Taxime|Cefotax,cephalosporin_3g,antibiotic,injection,0.5g|1g|2g,cefotaxime sodium|claforan
+cefpodoxime,Vantin|Cepodem|Pedpod,cephalosporin_3g,antibiotic,tablet|suspension,50mg|100mg|200mg,cefpodoxime proxetil|cepodem|vantin
+ceftazidime,Fortaz|Fortum|Ceptaz,cephalosporin_3g,antibiotic,injection,0.5g|1g|2g,ceftazidime pentahydrate|fortum|fortaz
+cefdinir,Omnicef|Cefdinir|Cefzon,cephalosporin_3g,antibiotic,capsule|suspension,125mg|300mg,omnicef|cefdinir
+cefepime,Maxipime|Cefepime|Cepin,cephalosporin_4g,antibiotic,injection,0.5g|1g|2g,cefepime hydrochloride|maxipime
+ceftaroline,Teflaro|Zinforo,cephalosporin_5g,antibiotic,injection,300mg|600mg,ceftaroline fosamil|teflaro
+cephalothin,Keflin|Seffin,cephalosporin_1g,antibiotic,injection,1g|2g,cefalothin|keflin
+azithromycin,Zithromax|Azee|Azithral|Azicip,macrolide,antibiotic,tablet|capsule|syrup|injection,100mg|250mg|500mg,azithro|zithromax|azee|azi|azithromycin dihydrate
+clarithromycin,Biaxin|Claribid|Clarimycin|Clarem,macrolide,antibiotic,tablet|suspension,125mg|250mg|500mg,clarithro|biaxin|claribid|clari
+erythromycin,Eryc|Erythrocin|Ilotycin|Erythroped,macrolide,antibiotic,tablet|capsule|suspension|injection|cream,125mg|250mg|500mg,erythro|eryc|erythrocin|ery
+roxithromycin,Rulide|Roxithro|Roxid,macrolide,antibiotic,tablet,50mg|150mg|300mg,roxithro|rulide|roxid
+spiramycin,Rovamycine|Spiramycin,macrolide,antibiotic,tablet|injection,1.5MIU|3MIU,rovamycine
+telithromycin,Ketek,ketolide,antibiotic,tablet,400mg,ketek
+ciprofloxacin,Cipro|Ciplox|Cifran|Ciprolet,fluoroquinolone,antibiotic,tablet|injection|eye drops|ear drops,250mg|500mg|750mg|200mg/100ml,cipro|ciplox|cifran|cpfx|ciprofloxacin hcl
+levofloxacin,Levaquin|Levoflox|Tavanic|L-Cin,fluoroquinolone,antibiotic,tablet|injection,250mg|500mg|750mg,levo|levaquin|levoflox|tavanic|lfx
+ofloxacin,Floxin|Zanocin|Oflox|Tarivid,fluoroquinolone,antibiotic,tablet|injection|eye drops|ear drops,100mg|200mg|400mg,oflox|zanocin|floxin|ofx
+moxifloxacin,Avelox|Moxif|Moxiflox|Vigamox,fluoroquinolone,antibiotic,tablet|injection|eye drops,400mg,avelox|moxif|mfx
+norfloxacin,Noroxin|Norbactin|Norflox,fluoroquinolone,antibiotic,tablet,400mg,norflox|noroxin|nfx
+gatifloxacin,Tequin|Gatiquin|Gatiflox,fluoroquinolone,antibiotic,tablet|injection|eye drops,200mg|400mg,tequin|gatiquin|gfx
+sparfloxacin,Zagam|Sparx|Sparflox,fluoroquinolone,antibiotic,tablet,100mg|200mg,zagam|sparx
+pefloxacin,Peflacine|Peflox,fluoroquinolone,antibiotic,tablet|injection,400mg,peflacine
+enoxacin,Penetrex|Enoxor,fluoroquinolone,antibiotic,tablet,200mg|400mg,penetrex
+delafloxacin,Baxdela,fluoroquinolone,antibiotic,tablet|injection,450mg|300mg,baxdela
+doxycycline,Vibramycin|Doxycycline|Doxylab|Biodoxi,tetracycline,antibiotic,capsule|tablet|injection,50mg|100mg|200mg,doxy|vibramycin|doxylab|doxycycline hyclate|doxycycline monohydrate
+tetracycline,Achromycin|Tetracyn|Sumycin,tetracycline,antibiotic,capsule|tablet|ointment,250mg|500mg,tetracyn|achromycin|tet
+minocycline,Minocin|Dynacin|Solodyn,tetracycline,antibiotic,capsule|tablet|injection,50mg|100mg|200mg,minocin|dynacin|mino
+tigecycline,Tygacil,glycylcycline,antibiotic,injection,50mg,tygacil|tige
+omadacycline,Nuzyra,aminomethylcycline_tetracycline,antibiotic,tablet|injection,100mg|150mg,nuzyra
+gentamicin,Garamycin|Gentacin|Genticyn,aminoglycoside,antibiotic,injection|cream|eye drops,20mg|40mg|80mg,genta|garamycin|gentacin|gmcn
+amikacin,Amikin|Amikacin|Mikacin,aminoglycoside,antibiotic,injection,100mg|250mg|500mg,amikin|mikacin|amk
+tobramycin,Nebcin|Tobi|Tobrex,aminoglycoside,antibiotic,injection|eye drops|nebuliser,40mg|80mg|300mg,tobi|tobrex|tobra
+streptomycin,Streptomycin|Streptomagma,aminoglycoside,antibiotic,injection,0.75g|1g,strep|streptomycin sulphate|sm
+neomycin,Mycifradin|Neosporin|Neo-Fradin,aminoglycoside,antibiotic,tablet|ointment|cream|drops,500mg,neo|mycifradin|neomycin sulphate
+netilmicin,Netromycin|Netillin,aminoglycoside,antibiotic,injection,25mg|50mg|100mg|150mg,netromycin|netillin
+kanamycin,Kantrex|Kana,aminoglycoside,antibiotic,injection|capsule,250mg|500mg|1g,kantrex|kana|km
+spectinomycin,Trobicin,aminocyclitol,antibiotic,injection,2g,trobicin
+trimethoprim-sulfamethoxazole,Bactrim|Septran|Co-trimoxazole|Cotrim,sulfonamide,antibiotic,tablet|suspension|injection,400/80mg|800/160mg,co-trimoxazole|cotrimoxazole|bactrim|septran|tmp-smx|sts|ds tablet
+sulfamethoxazole,Gantanol,sulfonamide,antibiotic,tablet,500mg,smx|gantanol|sulphamethoxazole
+sulfadiazine,Microsulfon|Sulfadiazine,sulfonamide,antibiotic,tablet|cream,500mg,sd|microsulfon|silver sulfadiazine
+trimethoprim,Primsol|Proloprim|Monotrim,diaminopyrimidine,antibiotic,tablet|suspension,100mg|200mg,tmp|primsol|proloprim
+vancomycin,Vancocin|Vancomycin|Vancoled,glycopeptide,antibiotic,injection|capsule,125mg|250mg|500mg|1g,vanco|vancocin|vancomycin hcl
+teicoplanin,Targocid|Teicobactin,glycopeptide,antibiotic,injection,200mg|400mg,targocid|teico
+dalbavancin,Dalvance|Xydalba,lipoglycopeptide,antibiotic,injection,500mg|1500mg,dalvance|xydalba
+oritavancin,Orbactiv,lipoglycopeptide,antibiotic,injection,400mg,orbactiv
+televancin,Vibativ,lipoglycopeptide,antibiotic,injection,250mg|750mg,vibativ
+meropenem,Merrem|Meronem|Meropenem,carbapenem,antibiotic,injection,250mg|500mg|1g,mero|merrem|meronem|mpm
+imipenem-cilastatin,Primaxin|Tienam|Imipen,carbapenem,antibiotic,injection,250mg|500mg,imipenem|tienam|primaxin|ipm
+ertapenem,Invanz|Ertapenem,carbapenem,antibiotic,injection,1g,invanz|erta|etp
+doripenem,Doribax,carbapenem,antibiotic,injection,250mg|500mg,doribax|dori
+biapenem,Omegacin,carbapenem,antibiotic,injection,150mg|300mg,omegacin
+linezolid,Zyvox|Linezolid|Lizolid|Linospan,oxazolidinone,antibiotic,tablet|injection|suspension,200mg|400mg|600mg,zyvox|lizolid|linospan|lzd
+tedizolid,Sivextro,oxazolidinone,antibiotic,tablet|injection,200mg,sivextro|tdz
+clindamycin,Cleocin|Dalacin|Clindac|Clinacin,lincosamide,antibiotic,capsule|injection|cream|gel,75mg|150mg|300mg|600mg,clinda|cleocin|dalacin|clindac|cm
+lincomycin,Lincocin|Albiotic,lincosamide,antibiotic,capsule|injection,250mg|500mg,lincocin|albiotic|lcm
+metronidazole,Flagyl|Metrogyl|Metro|Aristogyl,nitroimidazole,antibiotic,tablet|injection|gel|cream|suspension,200mg|400mg|500mg,flagyl|metrogyl|metro|mnz|metronidazole benzoate
+tinidazole,Tiniba|Fasigyn|Tindamax,nitroimidazole,antibiotic,tablet,300mg|500mg|1g,tiniba|fasigyn|tini|tnz
+ornidazole,Ornida|Ornof|Ornicare,nitroimidazole,antibiotic,tablet|injection,500mg|1g,ornida|ornof|onz
+secnidazole,Secnil|Flagentyl|Sindose,nitroimidazole,antibiotic,tablet,500mg|1g,secnil|sindose|snz
+rifampicin,Rifadin|Rimactane|Rifacin|RIF,rifamycin,antibiotic,capsule|tablet|injection|suspension,150mg|300mg|450mg|600mg,rifampin|rifadin|rimactane|rfp|rif
+rifabutin,Mycobutin,rifamycin,antibiotic,capsule,150mg,mycobutin|rbu
+rifaximin,Xifaxan|Normix|Rifagut,rifamycin,antibiotic,tablet,200mg|400mg|550mg,xifaxan|normix|rifagut
+rifapentine,Priftin,rifamycin,antibiotic,tablet,150mg,priftin|rpt
+colistin,Coly-Mycin|Colistimethate|Promixin,polymyxin,antibiotic,injection|inhalation,150mg|1MIU|2MIU,polymyxin e|colistimethate sodium|col|cst
+polymyxin b,Poly-Rx|Polymyxin B,polymyxin,antibiotic,injection|ointment|eye drops,500000IU,poly-rx|pmb
+daptomycin,Cubicin,lipopeptide,antibiotic,injection,350mg|500mg,cubicin|dapto|dap
+aztreonam,Azactam|Cayston|Aztreonam,monobactam,antibiotic,injection|inhalation,500mg|1g|2g,azactam|cayston|azt
+quinupristin-dalfopristin,Synercid,streptogramin,antibiotic,injection,500mg,synercid|q-d|qdalf
+isoniazid,Nydrazid|Laniazid|INH,antitubercular,antibiotic,tablet|injection|syrup,100mg|150mg|300mg,inh|isoniazid|h|nydrazid
+ethambutol,Myambutol|Servambutol|EMB,antitubercular,antibiotic,tablet,400mg|800mg|1000mg,emb|myambutol|e
+pyrazinamide,Tebrazid|Pyrazinamide|PZA,antitubercular,antibiotic,tablet,500mg|750mg,pza|pyrazinamide|z
+rifampicin-isoniazid,Rifinah|Rimactazid|R+H,antitubercular_combination,antibiotic,tablet,150/75mg|300/150mg,rh|rifinah|rimactazid
+rifampicin-isoniazid-pyrazinamide,Rifater|Akurit-3,antitubercular_combination,antibiotic,tablet,60/30/150mg|120/60/300mg,rhz|rifater|akurit|rhez
+rifampicin-isoniazid-pyrazinamide-ethambutol,Akurit-4|Rimstar,antitubercular_combination,antibiotic,tablet,75/37.5/150/275mg,rhze|akurit-4|rimstar|4-drug combination
+nitrofurantoin,Macrobid|Macrodantin|Nitrofur,nitrofuran,antibacterial,capsule|tablet|suspension,50mg|100mg,macrobid|macrodantin|nitrofur|nfu
+fosfomycin,Monurol|Fosfocin|Phosphomycin,phosphonic_acid,antibacterial,sachet|injection,3g|1g|2g,monurol|fosfocin|phosphomycin|fos
+fusidic acid,Fucidin|Fucithalmic|Fusidate,fusidane,antibiotic,tablet|cream|ointment|eye drops,250mg|500mg,fucidin|fucidic acid|sodium fusidate
+mupirocin,Bactroban|Mupiderm|Mupirocin,pseudomonic_acid,antibiotic,ointment|cream|nasal ointment,2%,bactroban|mupiderm
+retapamulin,Altabax|Altargo,pleuromutilin,antibiotic,ointment,1%,altabax|altargo
+ceftobiprole,Zeftera|Mabelio,cephalosporin_5g,antibiotic,injection,500mg,zeftera|mabelio
+ceftolozane-tazobactam,Zerbaxa,cephalosporin_combination,antibiotic,injection,1.5g,zerbaxa
+ceftazidime-avibactam,Avycaz|Zavicefta,cephalosporin_combination,antibiotic,injection,2.5g,avycaz|zavicefta
+meropenem-vaborbactam,Vabomere,carbapenem_combination,antibiotic,injection,4g,vabomere
+imipenem-cilastatin-relebactam,Recarbrio,carbapenem_combination,antibiotic,injection,1.25g,recarbrio
+amoxicillin-clavulanate-er,Augmentin XR|Amoxyclav XR,penicillin,antibiotic,tablet,1000/62.5mg,augmentin xr|amoclav xr|co-amoxiclav er
+ciprofloxacin-tinidazole,Ciptin|Ciplox TZ|Cifran CT,fluoroquinolone_combination,antibiotic,tablet,500/600mg,ciptin|ciplox tz|cifran ct|cipro+tini
+ofloxacin-ornidazole,Ornof|Oflo-OZ|O2|Oflomac OZ,fluoroquinolone_combination,antibiotic,tablet,200/500mg,o2|ornof|oflo oz|oflomac oz|ofloxacin+ornidazole
+cefixime-azithromycin,Cifaz|Zifi AZ|Cefaaz,cephalosporin_combination,antibiotic,tablet,200/250mg,cifaz|zifi az|cefaaz|cef+azithro
+cefixime-clavulanate,Ceftas CV|Zifi CV|Topcef CV,cephalosporin_combination,antibiotic,tablet,200/125mg,ceftas cv|zifi cv|topcef cv
+levofloxacin-ornidazole,Loxof OZ|Levinox OZ|Levo OZ,fluoroquinolone_combination,antibiotic,tablet,250/500mg|500/500mg,loxof oz|levinox oz|levo oz
+azithromycin-ambroxol,Azithral-AB|Azee-AB,macrolide_combination,antibiotic,tablet,250/30mg|500/30mg,azithral ab|azee ab|azi+ambroxol
+dapsone,Avlosulfon|Dapson,sulfone,antibiotic,tablet,25mg|50mg|100mg,avlosulfon|dds|dapson
+clofazimine,Lamprene,riminophenazine,antibiotic,capsule,50mg|100mg,lamprene|cfz
+chloramphenicol,Chloromycetin|Kemicetine|Enteromycetin,amphenicol,antibiotic,capsule|injection|eye drops|suspension,250mg|500mg|1g,chloro|chloromycetin|cam
+thiamphenicol,Thiophenicol|Urfamycin,amphenicol,antibiotic,capsule|injection,250mg|500mg,thiophenicol|tap
+bacitracin,Baciguent|Polysporin|Neosporin,polypeptide,antibiotic,ointment|cream,500IU/g,baciguent
+tyrothricin,Tyrosur|Trachisan,polypeptide,antibiotic,powder|lozenge,2mg,tyrosur
+nalidixic acid,Neggram|Nalidix|Uriben,quinolone,antibacterial,tablet|suspension,500mg|1g,neggram|nalidix
+cinoxacin,Cinobac,quinolone,antibacterial,capsule,250mg|500mg,cinobac
+novobiocin,Albamycin,aminocoumarin,antibiotic,capsule,250mg,albamycin
+methenamine,Hiprex|Mandelamine|Urex,formaldehyde_precursor,antibacterial,tablet,500mg|1g,hiprex|mandelamine|hexamine
+pivmecillinam,Selexid|Pivampicillin,penicillin,antibiotic,tablet,200mg|400mg,selexid|mecillinam
+cefoperazone,Cefobid|Cefoperazone|Magnex,cephalosporin_3g,antibiotic,injection,1g|2g,cefobid|magnex
+cefoperazone-sulbactam,Sulperazone|Bacperazone|Cefobid S,cephalosporin_combination,antibiotic,injection,1.5g|3g,sulperazone|bacperazone|cef-sulbactam
+cefpirome,Cefrom|Cefpirome,cephalosporin_4g,antibiotic,injection,1g|2g,cefrom
+tazobactam,Tazobactam|Tazorac,beta_lactamase_inhibitor,antibiotic,injection,250mg|500mg,tazo|tazobactam sodium
+sulbactam,Sulbactam|Betamaze,beta_lactamase_inhibitor,antibiotic,injection,250mg|500mg,sulbactam sodium|betamaze
+temocillin,Negaban,penicillin,antibiotic,injection,2g,negaban|tmo
+mecillinam,Selexidin|Amdinocillin,penicillin,antibiotic,injection,200mg|400mg,amdinocillin|selexidin
