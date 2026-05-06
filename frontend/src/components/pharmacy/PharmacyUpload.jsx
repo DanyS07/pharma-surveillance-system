@@ -32,6 +32,8 @@ const PharmacyUpload = () => {
     const [year, setYear]     = useState('');
     const [result, setResult] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [uploadProgress, setUploadProgress] = useState(0);
+    const [processingServer, setProcessingServer] = useState(false);
     const [error, setError]   = useState('');
 
     const StepIndicator = () => (
@@ -57,19 +59,38 @@ const PharmacyUpload = () => {
         if (!file)  { setError('Please select a file.'); return; }
         if (!month) { setError('Please select the reporting month.'); return; }
         if (!year)  { setError('Please select the reporting year.'); return; }
-        setError(''); setLoading(true);
+        setError('');
+        setLoading(true);
+        setUploadProgress(0);
+        setProcessingServer(false);
         const fd = new FormData();
         fd.append('file',  file);
         fd.append('month', month);   // integer string "1"–"12"
         fd.append('year',  year);    // four-digit string e.g. "2026"
         try {
-            const r = await axiosInstance.post('/inventory/upload', fd, { headers: { 'Content-Type': 'multipart/form-data' } });
+            const r = await axiosInstance.post('/inventory/upload', fd, {
+                headers: { 'Content-Type': 'multipart/form-data' },
+                onUploadProgress: progressEvent => {
+                    if (!progressEvent.total) return;
+                    const percent = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+                    setUploadProgress(Math.min(percent, 100));
+                    if (percent >= 100) setProcessingServer(true);
+                },
+            });
             setResult(r.data); setStep(2);
         } catch (err) {
             setError(err.response?.data?.message || 'Upload failed. Please try again.');
+        } finally {
+            setLoading(false);
+            setProcessingServer(false);
         }
-        setLoading(false);
     };
+
+    const uploadButtonText = loading
+        ? processingServer
+            ? 'Processing 100%'
+            : `Uploading ${uploadProgress}%`
+        : 'Upload & Process';
 
     return (
         <AppLayout>
@@ -122,7 +143,7 @@ const PharmacyUpload = () => {
                         <Button variant="contained" fullWidth size="large" onClick={upload} disabled={loading}
                             sx={{ py: 1.4, borderRadius: '12px', backgroundColor: '#111827', fontSize: '1rem',
                                   '&:hover': { backgroundColor: '#1f2937' } }}>
-                            {loading ? 'Processing…' : 'Upload & Process'}
+                            {uploadButtonText}
                         </Button>
 
                         {/* Required columns reference */}
@@ -220,3 +241,4 @@ const PharmacyUpload = () => {
 };
 
 export default PharmacyUpload;
+

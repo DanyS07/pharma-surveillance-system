@@ -4,6 +4,7 @@ import Box from '@mui/material/Box'; import Typography from '@mui/material/Typog
 import Paper from '@mui/material/Paper'; import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField'; import Collapse from '@mui/material/Collapse';
 import AppLayout from '../AppLayout'; import StatusBadge from '../StatusBadge';
+import TrendGraphs from '../TrendGraphs';
 import axiosInstance from '../../axiosInstance'; import { useToast } from '../../utils/Toast';
 
 const StatCard = ({ label, value, color }) => (
@@ -184,6 +185,12 @@ const OfficerDashboard = () => {
                         ))}
                     </Box>
                 )}
+            </Box>
+
+            {/* Trend Graphs Section */}
+            <Box sx={{ mt: 6, pt: 4, borderTop: '1px solid #e5e7eb' }}>
+                <Typography sx={{ fontWeight: 700, fontSize: '1.2rem', mb: 3 }}>📈 Analytics & Trends</Typography>
+                <TrendGraphs sections={['nsq', 'alerts', 'antibiotic']} />
             </Box>
         </AppLayout>
     );

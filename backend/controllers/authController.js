@@ -19,11 +19,20 @@ const ARGON2_OPTIONS = {
 // With this, both paths take ~300ms. Timing attack prevented.
 const DUMMY_HASH = '$argon2id$v=19$m=65536,t=3,p=4$c29tZXNhbHRzb21lc2FsdA$RdescudvJCsgt3ub+b+dWRWJTmaaJObG';
 
+function getTokenCookieOptions() {
+    const secure = process.env.COOKIE_SECURE === 'true';
+
+    return {
+        httpOnly: true,
+        secure,
+        sameSite: secure ? 'none' : 'lax',
+        path:     '/',
+    };
+}
+
 function attachTokenCookie(res, token) {
     res.cookie('token', token, {
-        httpOnly: true,
-        secure:   process.env.COOKIE_SECURE === 'true',
-        sameSite: 'strict',
+        ...getTokenCookieOptions(),
         maxAge:   7 * 24 * 60 * 60 * 1000,  // 7 days
     });
 }
@@ -100,7 +109,7 @@ exports.login = async (req, res) => {
         attachTokenCookie(res, token);
         await logAction(req, 'USER_LOGIN', user._id, 'user', `${user.name} logged in`);
 
-        res.status(200).json({ message: 'Login successful', userId: user._id, role: user.role, name: user.name });
+        res.status(200).json({ message: 'Login successful', userId: user._id, role: user.role, name: user.name, token });
     } catch (err) {
         console.error('login error:', err);
         res.status(500).json({ message: 'Login error' });
@@ -110,11 +119,7 @@ exports.login = async (req, res) => {
 
 // ── POST /user/logout ────────────────────────────────────────────
 exports.logout = (req, res) => {
-    res.clearCookie('token', {
-        httpOnly: true,
-        secure:   process.env.COOKIE_SECURE === 'true',
-        sameSite: 'strict',
-    });
+    res.clearCookie('token', getTokenCookieOptions());
     res.status(200).json({ message: 'Logged out successfully' });
 };
 

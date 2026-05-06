@@ -29,6 +29,16 @@ const pharmacySaleSchema = new mongoose.Schema({
     unitPrice:        { type: Number, default: 0  },  // price per unit
     pharmacyRecordId: { type: String, default: '' },  // pharmacy's internal record ID (REC0001)
     similarityScore:  { type: Number, default: null }, // AI fuzzy-match score for matched rows
+    nsqDrugName:      { type: String, default: '' },   // name from matched NSQ master record
+    nsqManufacturer:  { type: String, default: '' },   // NSQ master record manufacturer
+    nsqBanDate:       { type: String, default: '' },   // NSQ report date / ban date string
+
+    // Antibiotic matching result — written back after antibiotic matching completes
+    // Maps uploaded drug to antibiotic class (e.g., "beta-lactam", "fluoroquinolone")
+    // Populated automatically on upload; used for anomaly detection scoring
+    antibioticClass:  { type: String, default: '' },   // e.g., "carbapenem", "beta-lactam"
+    antibioticMatch:  { type: String, default: '' },   // matched antibiotic standard name
+    antibioticScore:  { type: Number, default: null }, // fuzzy match score (0-100)
 
     // NSQ match result — written back after AI validation completes
     // pending        → not yet checked

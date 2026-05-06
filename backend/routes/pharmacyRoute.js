@@ -38,6 +38,34 @@ router.get('/my-pharmacies', verifyToken, authorize('officer'), async (req, res)
 // GET /pharmacy/:pharmacyId/inventory — admin or officer
 router.get('/:pharmacyId/inventory', verifyToken, authorize('admin', 'officer'), async (req, res) => {
     try {
+        if (req.query.summary === 'true') {
+            const pharmacyId = userModel.db.base.Types.ObjectId.isValid(req.params.pharmacyId)
+                ? new userModel.db.base.Types.ObjectId(req.params.pharmacyId)
+                : req.params.pharmacyId;
+
+            const sessions = await pharmacySaleModel.aggregate([
+                { $match: { pharmacyId } },
+                {
+                    $group: {
+                        _id: '$uploadSessionId',
+                        sessionId: { $first: '$uploadSessionId' },
+                        date: { $max: '$createdAt' },
+                        rows: { $sum: 1 },
+                        nsqCount: {
+                            $sum: {
+                                $cond: [{ $eq: ['$nsqStatus', 'NSQ_CONFIRMED'] }, 1, 0],
+                            },
+                        },
+                        saleMonth: { $first: '$saleMonth' },
+                        saleYear: { $first: '$saleYear' },
+                    },
+                },
+                { $sort: { saleYear: -1, saleMonth: -1, date: -1 } },
+            ]);
+
+            return res.status(200).json({ message: 'Inventory sessions fetched', sessions });
+        }
+
         const records = await pharmacySaleModel
             .find({ pharmacyId: req.params.pharmacyId })
             .sort({ createdAt: -1 })

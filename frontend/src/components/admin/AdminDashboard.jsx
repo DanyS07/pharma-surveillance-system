@@ -9,6 +9,7 @@ import TableCell from '@mui/material/TableCell'; import TableHead from '@mui/mat
 import TableRow from '@mui/material/TableRow';
 import AppLayout    from '../AppLayout';
 import StatusBadge  from '../StatusBadge';
+import TrendGraphs from '../TrendGraphs';
 import axiosInstance from '../../axiosInstance';
 
 const StatCard = ({ label, value, sub, color }) => (
@@ -22,6 +23,7 @@ const StatCard = ({ label, value, sub, color }) => (
 const AdminDashboard = () => {
     const [data, setData] = useState({ pending: [], alerts: [], officers: [], pharmCount: 0, nsqCount: 0 });
     const [loading, setLoading] = useState(true);
+    // Removed reportOpen state as it is no longer needed
 
     useEffect(() => {
         Promise.all([
@@ -141,6 +143,13 @@ const AdminDashboard = () => {
                     </Table>
                 </Paper>
             </Box>
+
+            {/* Trend Graphs Section */}
+            <Box sx={{ mt: 6, pt: 4, borderTop: '1px solid #e5e7eb' }}>
+                <Typography sx={{ fontWeight: 700, fontSize: '1.2rem', mb: 3 }}>📈 Analytics & Trends</Typography>
+                <TrendGraphs sections={['nsq', 'alerts', 'antibiotic', 'forecastOverview']} />
+            </Box>
+
         </AppLayout>
     );
 };

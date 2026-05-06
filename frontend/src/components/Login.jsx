@@ -29,12 +29,37 @@ const Login = () => {
     // Prevents a logged-in user from seeing the login form if they navigate to /login.
     useEffect(() => {
         const stored = localStorage.getItem('pharma_user');
-        if (stored) {
-            const user = JSON.parse(stored);
-            if (DASH_ROUTES[user.role]) {
-                navigate(DASH_ROUTES[user.role], { replace: true });
-            }
+        if (!stored) return;
+
+        let user;
+        try {
+            user = JSON.parse(stored);
+        } catch (_) {
+            localStorage.removeItem('pharma_user');
+            return;
         }
+
+        if (!DASH_ROUTES[user.role] || !user.id) {
+            localStorage.removeItem('pharma_user');
+            return;
+        }
+
+        let cancelled = false;
+        axiosInstance.get(`/user/profile/${user.id}`)
+            .then(() => {
+                if (!cancelled) {
+                    navigate(DASH_ROUTES[user.role], { replace: true });
+                }
+            })
+            .catch(() => {
+                if (!cancelled) {
+                    localStorage.removeItem('pharma_user');
+                }
+            });
+
+        return () => {
+            cancelled = true;
+        };
     }, [navigate]);
 
     const handleChange = e => setInputs(p => ({ ...p, [e.target.name]: e.target.value }));
@@ -48,6 +73,7 @@ const Login = () => {
                 id:   res.data.userId,
                 role: res.data.role,
                 name: res.data.name,
+                token: res.data.token,
             }));
             showToast(`Welcome back, ${res.data.name}!`);
             // replace: true removes /login from history so pressing Back

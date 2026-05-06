@@ -7,10 +7,13 @@ const jwt = require('jsonwebtoken');
 
 function verifyToken(req, res, next) {
     try {
-        const token = req.cookies.token;
+        const authHeader = req.headers.authorization || '';
+        const bearerToken = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
+        const token = req.cookies.token || bearerToken;
         if (!token) throw 'No token provided';
 
         const payload = jwt.verify(token, process.env.JWT_SECRET);
+        console.log('verifyToken', { method: req.method, path: req.path, hasCookie: !!req.cookies.token, hasBearer: !!bearerToken, payload });
         req.user = payload; // { id, role }
         next();
     } catch (error) {

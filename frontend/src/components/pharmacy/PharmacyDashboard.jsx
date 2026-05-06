@@ -4,9 +4,35 @@ import Box from '@mui/material/Box'; import Typography from '@mui/material/Typog
 import Paper from '@mui/material/Paper'; import Button from '@mui/material/Button';
 import Table from '@mui/material/Table'; import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell'; import TableHead from '@mui/material/TableHead'; import TableRow from '@mui/material/TableRow';
-import AppLayout from '../AppLayout'; import axiosInstance from '../../axiosInstance';
+import AppLayout from '../AppLayout'; 
+import TrendGraphs from '../TrendGraphs';
+import axiosInstance from '../../axiosInstance';
 
 const MONTHS = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+const normalizeUploads = (payload) => {
+    if (Array.isArray(payload?.uploads)) {
+        return payload.uploads;
+    }
+
+    const sessions = {};
+    (payload?.records || []).forEach(row => {
+        if (!sessions[row.uploadSessionId]) {
+            sessions[row.uploadSessionId] = {
+                sid: row.uploadSessionId,
+                date: row.createdAt,
+                rows: 0,
+                nsq: 0,
+                month: row.saleMonth,
+                year: row.saleYear,
+            };
+        }
+        sessions[row.uploadSessionId].rows++;
+        if (row.nsqStatus === 'NSQ_CONFIRMED') sessions[row.uploadSessionId].nsq++;
+    });
+
+    return Object.values(sessions);
+};
 
 const StatCard = ({ label, value, color }) => (
     <Paper elevation={0} sx={{ border: '1px solid #e5e7eb', borderRadius: '12px', p: '20px 24px', flex: 1 }}>
@@ -24,20 +50,16 @@ const PharmacyDashboard = () => {
         Promise.all([
             axiosInstance.get(`/user/profile/${stored.id}`),
             axiosInstance.get('/inventory/my-uploads'),
-        ]).then(([p, u]) => { setProfile(p.data.user); setUploads(u.data.records || []); })
+        ]).then(([p, u]) => { setProfile(p.data.user); setUploads(normalizeUploads(u.data)); })
           .catch(console.error);
     }, [stored.id]);
 
-    // Group rows by session to build the sessions summary table
-    const sessions = {};
-    uploads.forEach(r => {
-        if (!sessions[r.uploadSessionId])
-            sessions[r.uploadSessionId] = { sid: r.uploadSessionId, date: r.createdAt, rows: 0, nsq: 0, month: r.saleMonth, year: r.saleYear };
-        sessions[r.uploadSessionId].rows++;
-        if (r.nsqStatus === 'NSQ_CONFIRMED') sessions[r.uploadSessionId].nsq++;
-    });
-    const sessionList = Object.values(sessions).sort((a, b) => new Date(b.date) - new Date(a.date));
-    const nsqTotal = uploads.filter(r => r.nsqStatus === 'NSQ_CONFIRMED').length;
+    const sessionList = [...uploads].sort((a, b) =>
+        (b.year - a.year) ||
+        (b.month - a.month) ||
+        (new Date(b.date) - new Date(a.date))
+    );
+    const nsqTotal = uploads.reduce((sum, upload) => sum + (upload.nsq || 0), 0);
     const lastUpload = sessionList.length > 0 ? new Date(sessionList[0].date).toLocaleDateString() : '—';
 
     const StatusBanner = () => {
@@ -141,8 +163,15 @@ const PharmacyDashboard = () => {
                     </Table>
                 </Paper>
             </Box>
+
+            {/* Trend Graphs Section */}
+            <Box sx={{ mt: 6, pt: 4, borderTop: '1px solid #e5e7eb' }}>
+                <Typography sx={{ fontWeight: 700, fontSize: '1.2rem', mb: 3 }}>Your NSQ Detection Trend</Typography>
+                <TrendGraphs sections={['nsq']} />
+            </Box>
         </AppLayout>
     );
 };
 
 export default PharmacyDashboard;
+

@@ -13,14 +13,17 @@ import Slider from '@mui/material/Slider'
 import AppLayout from '../AppLayout'
 import StatusBadge from '../StatusBadge'
 import axiosInstance from '../../axiosInstance'
+import { useToast } from '../../utils/Toast'
 
 const MONTHS = ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July',
     'August', 'September', 'October', 'November', 'December']
 
 const SessionView = () => {
     const { sessionId } = useParams()
+    const showToast = useToast()
     const [records, setRecords] = useState([])
     const [sliderValue, setSliderValue] = useState(30)
+    const [downloadingReport, setDownloadingReport] = useState(false)
 
     useEffect(() => {
         axiosInstance.get(`/inventory/session/${sessionId}`)
@@ -36,6 +39,71 @@ const SessionView = () => {
         r.nsqStatus === 'NSQ_CONFIRMED' ||
         (r.nsqStatus === 'PROBABLE_MATCH' && Number(r.similarityScore || 0) >= sliderValue)
     )
+
+    const formatDate = (value) => {
+        if (!value) return '-'
+        const date = new Date(value)
+        return Number.isNaN(date.getTime()) ? '-' : date.toLocaleDateString()
+    }
+
+    const getReportErrorMessage = async (err) => {
+        const data = err.response?.data
+        if (data instanceof Blob) {
+            const text = await data.text()
+            if (text.includes('Cannot GET /reports/nsq')) {
+                return 'NSQ report route is not available on the running backend. Restart the backend server and try again.'
+            }
+            try {
+                return JSON.parse(text).message || text
+            } catch (_) {
+                return text || 'Could not generate NSQ report. Please try again.'
+            }
+        }
+        return data?.message || 'Could not generate NSQ report. Please try again.'
+    }
+
+    const saveReportBlob = (blob) => {
+        const url = window.URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }))
+        const link = document.createElement('a')
+        link.href = url
+        link.setAttribute('download', `nsq_detection_${sample?.saleYear || 'session'}_${String(sample?.saleMonth || '').padStart(2, '0')}.pdf`)
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
+        window.URL.revokeObjectURL(url)
+    }
+
+    const downloadReport = async () => {
+        setDownloadingReport(true)
+        try {
+            try {
+                const response = await axiosInstance.get(`/reports/nsq/session/${sessionId}`, {
+                    responseType: 'blob',
+                })
+                saveReportBlob(response.data)
+                return
+            } catch (sessionErr) {
+                if (!sample?.pharmacyId || !sample?.saleMonth || !sample?.saleYear) {
+                    throw sessionErr
+                }
+            }
+
+            const fallback = await axiosInstance.get('/reports/nsq', {
+                params: {
+                    pharmacyId: sample.pharmacyId,
+                    month: sample.saleMonth,
+                    year: sample.saleYear,
+                },
+                responseType: 'blob',
+            })
+            saveReportBlob(fallback.data)
+        } catch (err) {
+            console.error(err)
+            showToast(await getReportErrorMessage(err), 'error')
+        } finally {
+            setDownloadingReport(false)
+        }
+    }
 
     return (
         <AppLayout>
@@ -56,10 +124,11 @@ const SessionView = () => {
                 </Box>
                 <Button
                     variant="outlined"
-                    onClick={() => window.print()}
+                    onClick={downloadReport}
+                    disabled={records.length === 0 || downloadingReport}
                     sx={{ borderRadius: '999px', borderColor: '#e5e7eb', color: '#374151', fontSize: '0.85rem' }}
                 >
-                    Print / Export PDF
+                    {downloadingReport ? 'Preparing Report...' : 'Download Report'}
                 </Button>
             </Box>
 
@@ -96,7 +165,7 @@ const SessionView = () => {
                 <Table size="small">
                     <TableHead>
                         <TableRow sx={{ backgroundColor: '#f9fafb' }}>
-                            {['Drug Name', 'Batch No.', 'Manufacturer', 'Expiry Date', 'Qty', 'Score', 'NSQ Status'].map(header => (
+                            {['Drug Name', 'Batch No.', 'Manufacturer', 'Matched NSQ Drug', 'NSQ Ban Date', 'Qty', 'Score', 'NSQ Status'].map(header => (
                                 <TableCell
                                     key={header}
                                     sx={{ fontWeight: 600, fontSize: '0.7rem', color: '#9ca3af', textTransform: 'uppercase', letterSpacing: '0.04em', py: 1.5 }}
@@ -127,7 +196,8 @@ const SessionView = () => {
                                 </TableCell>
                                 <TableCell sx={{ fontFamily: 'monospace', fontSize: '0.78rem' }}>{record.batchNumber}</TableCell>
                                 <TableCell sx={{ color: '#6b7280', fontSize: '0.82rem' }}>{record.manufacturer || '-'}</TableCell>
-                                <TableCell sx={{ fontSize: '0.78rem', color: '#9ca3af' }}>{record.expiryDate || '-'}</TableCell>
+                                <TableCell sx={{ fontSize: '0.82rem', color: '#374151' }}>{record.nsqDrugName || '-'}</TableCell>
+                                <TableCell sx={{ fontSize: '0.82rem', color: '#9ca3af' }}>{formatDate(record.nsqBanDate)}</TableCell>
                                 <TableCell sx={{ fontSize: '0.85rem' }}>{record.quantity}</TableCell>
                                 <TableCell sx={{ fontFamily: 'monospace', fontSize: '0.78rem' }}>
                                     {typeof record.similarityScore === 'number' ? record.similarityScore.toFixed(2) : '-'}

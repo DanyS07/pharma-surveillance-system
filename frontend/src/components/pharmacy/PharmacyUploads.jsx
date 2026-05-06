@@ -10,16 +10,39 @@ const MONTHS = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','
 
 const PharmacyUploads = () => {
     const [uploads, setUploads] = useState([]);
-    useEffect(() => { axiosInstance.get('/inventory/my-uploads').then(r => setUploads(r.data.records || [])).catch(console.error); }, []);
+    useEffect(() => {
+        axiosInstance.get('/inventory/my-uploads')
+            .then(r => {
+                if (Array.isArray(r.data.uploads)) {
+                    setUploads(r.data.uploads);
+                    return;
+                }
 
-    const sessions = {};
-    uploads.forEach(r => {
-        if (!sessions[r.uploadSessionId])
-            sessions[r.uploadSessionId] = { sid: r.uploadSessionId, date: r.createdAt, rows: 0, nsq: 0, month: r.saleMonth, year: r.saleYear };
-        sessions[r.uploadSessionId].rows++;
-        if (r.nsqStatus === 'NSQ_CONFIRMED') sessions[r.uploadSessionId].nsq++;
-    });
-    const list = Object.values(sessions).sort((a, b) => new Date(b.date) - new Date(a.date));
+                const sessions = {};
+                (r.data.records || []).forEach(row => {
+                    if (!sessions[row.uploadSessionId]) {
+                        sessions[row.uploadSessionId] = {
+                            sid: row.uploadSessionId,
+                            date: row.createdAt,
+                            rows: 0,
+                            nsq: 0,
+                            month: row.saleMonth,
+                            year: row.saleYear,
+                        };
+                    }
+                    sessions[row.uploadSessionId].rows++;
+                    if (row.nsqStatus === 'NSQ_CONFIRMED') sessions[row.uploadSessionId].nsq++;
+                });
+                setUploads(Object.values(sessions));
+            })
+            .catch(console.error);
+    }, []);
+
+    const list = [...uploads].sort((a, b) =>
+        (b.year - a.year) ||
+        (b.month - a.month) ||
+        (new Date(b.date) - new Date(a.date))
+    );
 
     return (
         <AppLayout>

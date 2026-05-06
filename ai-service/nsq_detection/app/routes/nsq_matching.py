@@ -5,7 +5,7 @@
 
 from fastapi import APIRouter, HTTPException, Header
 from typing  import Optional
-from app.services.drug_matcher import compute_similarity, classify
+from app.services.matcher_core import compute_similarity, classify
 from app.models import (
     AIValidateRequest,
     AIValidateResponse,

@@ -16,6 +16,8 @@ import AdminOfficers   from './components/admin/AdminOfficers';
 import NSQMasterList   from './components/admin/NSQMasterList';
 import AdminAlerts     from './components/admin/AdminAlerts';
 import AuditLog        from './components/admin/AuditLog';
+import AntibioticAnomaly from './components/analysis/AntibioticAnomaly';
+import Forecast from './components/Forecast';
 
 // Officer pages
 import OfficerDashboard  from './components/officer/OfficerDashboard';
@@ -72,8 +74,10 @@ function App() {
                         <Route path="/admin/session/:sessionId" element={<SessionView />} />
                         <Route path="/admin/officers"   element={<AdminOfficers />} />
                         <Route path="/admin/nsq"        element={<NSQMasterList />} />
+                        <Route path="/admin/antibiotic-anomaly" element={<AntibioticAnomaly />} />
                         <Route path="/admin/alerts"     element={<AdminAlerts />} />
                         <Route path="/admin/audit"      element={<AuditLog />} />
+                        <Route path="/admin/forecast"   element={<Forecast />} />
                     </Route>
 
                     {/* Officer */}
@@ -83,6 +87,11 @@ function App() {
                         <Route path="/officer/pharmacies"         element={<OfficerPharmacies />} />
                         <Route path="/officer/pharmacies/:id"     element={<PharmacyDetail />} />
                         <Route path="/officer/session/:sessionId" element={<SessionView />} />
+                        <Route path="/officer/forecast" element={<Forecast />} />
+                    </Route>
+
+                    <Route element={<PrivateRoutes allowedRoles={['admin', 'officer']} />}>
+                        <Route path="/officer/antibiotic-anomaly" element={<AntibioticAnomaly />} />
                     </Route>
 
                     {/* Pharmacy */}
@@ -91,6 +100,7 @@ function App() {
                         <Route path="/pharmacy/upload"               element={<PharmacyUpload />} />
                         <Route path="/pharmacy/uploads"              element={<PharmacyUploads />} />
                         <Route path="/pharmacy/uploads/:sessionId"   element={<SessionDetail />} />
+                        <Route path="/pharmacy/forecast" element={<Forecast />} />
                     </Route>
 
                     {/* Utility */}

@@ -8,4 +8,18 @@ const axiosInstance = axios.create({
     withCredentials: true,
 });
 
+axiosInstance.interceptors.request.use(config => {
+    const stored = localStorage.getItem('pharma_user');
+    if (!stored) return config;
+
+    try {
+        const user = JSON.parse(stored);
+        if (user.token) {
+            config.headers.Authorization = `Bearer ${user.token}`;
+        }
+    } catch (_) {}
+
+    return config;
+});
+
 export default axiosInstance;

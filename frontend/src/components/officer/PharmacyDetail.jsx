@@ -18,7 +18,7 @@ const MONTHS = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep
 const PharmacyDetail = () => {
     const { id } = useParams()
     const location = useLocation()
-    const [inventory, setInventory] = useState([])
+    const [sessionList, setSessionList] = useState([])
     const [alerts, setAlerts] = useState([])
     const isAdminView = location.pathname.startsWith('/admin')
     const backPath = isAdminView ? '/admin/pharmacies' : '/officer/pharmacies'
@@ -26,28 +26,15 @@ const PharmacyDetail = () => {
 
     useEffect(() => {
         Promise.all([
-            axiosInstance.get(`/pharmacy/${id}/inventory`),
+            axiosInstance.get(`/pharmacy/${id}/inventory`, { params: { summary: true } }),
             axiosInstance.get(`/pharmacy/${id}/alerts`),
         ])
             .then(([inv, al]) => {
-                setInventory(inv.data.records || [])
+                setSessionList(inv.data.sessions || [])
                 setAlerts(al.data.alerts || [])
             })
             .catch(console.error)
     }, [id])
-
-    const sessions = {}
-    inventory.forEach(record => {
-        if (!sessions[record.uploadSessionId]) {
-            sessions[record.uploadSessionId] = {
-                sessionId: record.uploadSessionId,
-                rows: [],
-                date: record.createdAt,
-            }
-        }
-        sessions[record.uploadSessionId].rows.push(record)
-    })
-    const sessionList = Object.values(sessions).sort((a, b) => new Date(b.date) - new Date(a.date))
 
     return (
         <AppLayout>
@@ -90,10 +77,8 @@ const PharmacyDetail = () => {
                                     </TableCell>
                                 </TableRow>
                             ) : sessionList.map(session => {
-                                const nsqCount = session.rows.filter(row => row.nsqStatus === 'NSQ_CONFIRMED').length
-                                const sample = session.rows[0]
-                                const period = sample?.saleMonth
-                                    ? `${MONTHS[sample.saleMonth]} ${sample.saleYear}`
+                                const period = session.saleMonth
+                                    ? `${MONTHS[session.saleMonth]} ${session.saleYear}`
                                     : new Date(session.date).toLocaleDateString()
 
                                 return (
@@ -102,10 +87,10 @@ const PharmacyDetail = () => {
                                             {session.sessionId.slice(0, 18)}...
                                         </TableCell>
                                         <TableCell sx={{ fontSize: '0.85rem', fontWeight: 500 }}>{period}</TableCell>
-                                        <TableCell sx={{ fontSize: '0.85rem' }}>{session.rows.length}</TableCell>
+                                        <TableCell sx={{ fontSize: '0.85rem' }}>{session.rows}</TableCell>
                                         <TableCell>
-                                            {nsqCount > 0
-                                                ? <Typography sx={{ color: '#dc2626', fontWeight: 700, fontSize: '0.85rem' }}>{nsqCount} NSQ</Typography>
+                                            {session.nsqCount > 0
+                                                ? <Typography sx={{ color: '#dc2626', fontWeight: 700, fontSize: '0.85rem' }}>{session.nsqCount} NSQ</Typography>
                                                 : <Typography sx={{ color: '#059669', fontSize: '0.85rem' }}>0 - Safe</Typography>}
                                         </TableCell>
                                         <TableCell>

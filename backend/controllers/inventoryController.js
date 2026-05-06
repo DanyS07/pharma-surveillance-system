@@ -1,4 +1,5 @@
 const { randomUUID }    = require('crypto');
+const mongoose          = require('mongoose');
 const XLSX              = require('xlsx');
 const pharmacySaleModel = require('../models/pharmacySaleModel');
 const { logAction }     = require('../services/auditService');
@@ -164,8 +165,11 @@ exports.uploadInventory = async (req, res) => {
         // ── Step 2: AI NLP validation ────────────────────────────────
         // Only the batch-matched rows are sent to the Python AI service.
         // The AI confirms or rejects the match using drug name fuzzy matching.
-        const matchedBatches = nsqMatches.map(n => n.batchNumber);
-        const rowsForAI      = cleanRows.filter(r => matchedBatches.includes(r.batchNumber));
+        const matchedBatches = nsqMatches.map(n => String(n.batchNumber || '').trim().toUpperCase());
+        const matchedBatchSet = new Set(matchedBatches);
+        const rowsForAI = cleanRows.filter(
+            r => matchedBatchSet.has(String(r.batchNumber || '').trim().toUpperCase())
+        );
         const aiResults      = await sendToAI(pharmacyId, sessionId, rowsForAI, nsqMatches);
 
         if (!aiResults) {
@@ -184,15 +188,18 @@ exports.uploadInventory = async (req, res) => {
         // Runs inside a Mongoose transaction — all writes succeed or all roll back.
         await processAIResults(aiResults, sessionId, pharmacyId);
 
-        const confirmedCount = aiResults.filter(r => r.result === 'NSQ_CONFIRMED').length;
+        const confirmedRows = aiResults.filter(r => r.result === 'NSQ_CONFIRMED');
+        const confirmedBatchCount = new Set(
+            confirmedRows.map(r => String(r.batchNumber || '').trim().toUpperCase())
+        ).size;
 
         res.status(200).json({
-            message:       'File processed and NSQ check complete.',
+            message:            'File processed. NSQ check complete.',
             sessionId,
-            totalRows:     cleanRows.length,
-            nsqMatchCount: nsqMatches.length,
-            confirmedNSQ:  confirmedCount,
-            period:        `${MONTH_NAMES[month - 1]} ${year}`,
+            totalRows:          cleanRows.length,
+            nsqMatchCount:      matchedBatchSet.size,
+            confirmedNSQ:       confirmedBatchCount,
+            period:             `${MONTH_NAMES[month - 1]} ${year}`,
         });
 
     } catch (err) {
@@ -205,11 +212,31 @@ exports.uploadInventory = async (req, res) => {
 // ── GET /inventory/my-uploads ────────────────────────────────────
 exports.getMyUploads = async (req, res) => {
     try {
-        const records = await pharmacySaleModel
-            .find({ pharmacyId: req.user.id })
-            .sort({ saleYear: -1, saleMonth: -1, createdAt: -1 })
-            .limit(300);
-        res.status(200).json({ message: 'Uploads fetched', records });
+        const pharmacyId = mongoose.Types.ObjectId.isValid(req.user.id)
+            ? new mongoose.Types.ObjectId(req.user.id)
+            : req.user.id;
+
+        const uploads = await pharmacySaleModel.aggregate([
+            { $match: { pharmacyId } },
+            {
+                $group: {
+                    _id: '$uploadSessionId',
+                    sid: { $first: '$uploadSessionId' },
+                    date: { $max: '$createdAt' },
+                    rows: { $sum: 1 },
+                    nsq: {
+                        $sum: {
+                            $cond: [{ $eq: ['$nsqStatus', 'NSQ_CONFIRMED'] }, 1, 0],
+                        },
+                    },
+                    month: { $first: '$saleMonth' },
+                    year: { $first: '$saleYear' },
+                },
+            },
+            { $sort: { year: -1, month: -1, date: -1 } },
+        ]);
+
+        res.status(200).json({ message: 'Uploads fetched', uploads });
     } catch (err) {
         console.error('getMyUploads error:', err);
         res.status(500).json({ message: 'Error fetching uploads' });

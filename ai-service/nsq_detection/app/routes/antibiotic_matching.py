@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Header, HTTPException
 from typing import Optional
+from pydantic import BaseModel
 import os
 
 from app.models import (
@@ -9,11 +10,39 @@ from app.models import (
     AIMatchFeatures,
 )
 from app.services.csv_export import build_csv_rows
-from app.services.matcher_core import classify, compute_component_scores
+from app.services.matcher_core import classify, compute_component_scores, compute_similarity
 
 
 router = APIRouter(prefix="/api/antibiotic", tags=["Antibiotic Matching"])
 API_KEY = os.getenv("AI_API_KEY", "")
+
+
+# ── MODELS FOR ANTIBIOTIC REFERENCE MATCHING ──────────────────────
+class AntibioticRefRow(BaseModel):
+    drugName: str
+    batchNumber: str = ""
+
+class AntibioticRefRecord(BaseModel):
+    standard_name: str
+    antibiotic_class: str = ""
+    brand_names: str = ""
+    synonyms: str = ""
+
+class AntibioticRefMatchRequest(BaseModel):
+    pharmacyId: str
+    sessionId: str
+    rows: list[AntibioticRefRow]
+    antibioticRecords: list[AntibioticRefRecord]
+
+class AntibioticRefMatchResult(BaseModel):
+    drugName: str
+    batchNumber: str = ""
+    matched_name: str
+    antibiotic_class: str
+    similarity_score: float
+
+class AntibioticRefMatchResponse(BaseModel):
+    results: list[AntibioticRefMatchResult]
 
 
 def _verify_key(x_api_key: Optional[str]):
@@ -22,6 +51,66 @@ def _verify_key(x_api_key: Optional[str]):
 
 
 def _best_antibiotic_match(drug_name: str, candidates: list):
+    best_score = -1.0
+    best_candidate = None
+
+    for candidate in candidates:
+        score = compute_similarity(drug_name, candidate.standard_name)
+        if score > best_score:
+            best_score = score
+            best_candidate = candidate
+
+    return best_candidate, best_score
+
+
+# ── ANTIBIOTIC REFERENCE FUZZY MATCHING ───────────────────────────
+# NEW: matches pharmacy drugs against antibiotic reference database
+# Used during pharmacy upload to classify drugs as antibiotics
+@router.post("/match-sales", response_model=AntibioticRefMatchResponse)
+async def match_antibiotic_reference(
+    request: AntibioticRefMatchRequest,
+    x_api_key: Optional[str] = Header(None),
+):
+    """
+    POST /api/antibiotic/match-sales
+    
+    Matches pharmacy drugs against antibiotic reference database using fuzzy matching.
+    Called automatically during pharmacy inventory upload.
+    
+    Returns only matches with similarity >= 80%.
+    """
+    _verify_key(x_api_key)
+
+    try:
+        results: list[AntibioticRefMatchResult] = []
+
+        for row in request.rows:
+            candidate, score = _best_antibiotic_match(
+                row.drugName,
+                request.antibioticRecords,
+            )
+
+            if candidate is None or score < 80.0:
+                continue  # Below threshold — skip this drug
+
+            result = AntibioticRefMatchResult(
+                drugName=row.drugName,
+                batchNumber=row.batchNumber or "",
+                matched_name=candidate.standard_name,
+                antibiotic_class=candidate.antibiotic_class or "unknown",
+                similarity_score=round(score, 2),
+            )
+            results.append(result)
+
+        return AntibioticRefMatchResponse(results=results)
+
+    except HTTPException:
+        raise
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"Internal error: {exc}")
+
+
+def _best_antibiotic_full_match(drug_name: str, candidates: list):
     best_score = -1.0
     best_candidate = None
     best_components = None
@@ -36,8 +125,10 @@ def _best_antibiotic_match(drug_name: str, candidates: list):
     return best_candidate, best_components
 
 
-@router.post("/match-sales", response_model=AIAntibioticMatchResponse)
-async def match_antibiotic_sales(
+# ── LEGACY: ANTIBIOTIC SALES MATCHING (for CSV export) ─────────────
+# Kept for backward compatibility
+@router.post("/match-sales-full", response_model=AIAntibioticMatchResponse)
+async def match_antibiotic_sales_full(
     request: AIAntibioticMatchRequest,
     x_api_key: Optional[str] = Header(None),
 ):
@@ -47,7 +138,7 @@ async def match_antibiotic_sales(
         results: list[AIAntibioticMatchResult] = []
 
         for row in request.salesRows:
-            best_candidate, components = _best_antibiotic_match(
+            best_candidate, components = _best_antibiotic_full_match(
                 row.drugName,
                 request.antibioticRecords,
             )
@@ -120,5 +211,9 @@ async def health_check():
     return {
         "status": "ok",
         "service": "antibiotic-matching",
-        "endpoint": "POST /api/antibiotic/match-sales",
+        "endpoints": [
+            "POST /api/antibiotic/match-sales (reference matching)",
+            "POST /api/antibiotic/analyze (anomaly detection)"
+        ],
     }
+

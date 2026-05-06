@@ -34,13 +34,13 @@ const AdminAlerts = () => {
             <Paper elevation={0} sx={{ border: '1px solid #e5e7eb', borderRadius: '12px', overflow: 'hidden' }}>
                 <Table size="small">
                     <TableHead><TableRow sx={{ backgroundColor: '#f9fafb' }}>
-                        {['Drug','Batch No.','Pharmacy','District','Officer','Status','Date'].map(h => (
+                        {['Drug','Batch No.','Pharmacy','District','Officer','Matched NSQ','NSQ Manufacturer','Ban Date','Similarity','Status','Date'].map(h => (
                             <TableCell key={h} sx={{ fontWeight: 600, fontSize: '0.7rem', color: '#9ca3af', textTransform: 'uppercase', letterSpacing: '0.04em', py: 1.5 }}>{h}</TableCell>
                         ))}
                     </TableRow></TableHead>
                     <TableBody>
                         {filtered.length === 0 ? (
-                            <TableRow><TableCell colSpan={7} sx={{ textAlign: 'center', py: 5, color: '#9ca3af' }}>No alerts found.</TableCell></TableRow>
+                            <TableRow><TableCell colSpan={11} sx={{ textAlign: 'center', py: 5, color: '#9ca3af' }}>No alerts found.</TableCell></TableRow>
                         ) : filtered.map(a => (
                             <TableRow key={a._id} sx={{ '&:hover': { backgroundColor: '#f9fafb' }, '&:last-child td': { border: 0 } }}>
                                 <TableCell sx={{ fontWeight: 700, fontSize: '0.88rem' }}>
@@ -51,6 +51,10 @@ const AdminAlerts = () => {
                                 <TableCell sx={{ fontWeight: 600, fontSize: '0.85rem' }}>{a.pharmacyId?.name || '—'}</TableCell>
                                 <TableCell sx={{ color: '#6b7280', fontSize: '0.82rem' }}>{a.pharmacyId?.district || '—'}</TableCell>
                                 <TableCell sx={{ color: '#6b7280', fontSize: '0.82rem' }}>{a.officerId?.name || '—'}</TableCell>
+                                <TableCell sx={{ fontSize: '0.82rem', color: '#374151' }}>{a.nsqDrugName || '—'}</TableCell>
+                                <TableCell sx={{ fontSize: '0.82rem', color: '#6b7280' }}>{a.nsqManufacturer || '—'}</TableCell>
+                                <TableCell sx={{ fontSize: '0.82rem', color: '#9ca3af' }}>{a.banDate ? new Date(a.banDate).toLocaleDateString() : '—'}</TableCell>
+                                <TableCell sx={{ fontFamily: 'monospace', fontSize: '0.78rem' }}>{typeof a.similarityScore === 'number' ? a.similarityScore.toFixed(2) : '—'}</TableCell>
                                 <TableCell><StatusBadge status={a.status} /></TableCell>
                                 <TableCell sx={{ fontSize: '0.78rem', color: '#9ca3af' }}>{new Date(a.createdAt).toLocaleDateString()}</TableCell>
                             </TableRow>

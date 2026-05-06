@@ -14,6 +14,8 @@ const NAV = {
         { to: '/admin/pharmacies', label: 'Pharmacies'      },
         { to: '/admin/officers',   label: 'Officers'        },
         { to: '/admin/nsq',        label: 'NSQ Master List' },
+        { to: '/admin/antibiotic-anomaly', label: 'Antibiotic Anomaly' },
+        { to: '/admin/forecast', label: 'Risk Forecast' },
         { to: '/admin/alerts',     label: 'Alerts'          },
         { to: '/admin/audit',      label: 'Audit Log'       },
     ],
@@ -21,10 +23,13 @@ const NAV = {
         { to: '/officer/dashboard',  label: 'Dashboard'     },
         { to: '/officer/alerts',     label: 'My Alerts'     },
         { to: '/officer/pharmacies', label: 'My Pharmacies' },
+        { to: '/officer/forecast', label: 'Risk Forecast' },
+        { to: '/officer/antibiotic-anomaly', label: 'Antibiotic Anomaly' },
     ],
     pharmacy: [
         { to: '/pharmacy/dashboard', label: 'Dashboard'        },
         { to: '/pharmacy/upload',    label: 'Upload Inventory'  },
+        { to: '/pharmacy/forecast',  label: 'Risk Forecast' },
         { to: '/pharmacy/uploads',   label: 'My Uploads'        },
     ],
 };

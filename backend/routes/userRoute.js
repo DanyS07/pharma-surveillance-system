@@ -6,12 +6,12 @@ const authorize   = require('../middleware/authorize');
 const auth        = require('../controllers/authController');
 const admin       = require('../controllers/adminController');
 
-const loginLimiter = rateLimit({
+const loginLimiter = process.env.NODE_ENV === 'production' ? rateLimit({
     windowMs: 15 * 60 * 1000,
     max:      5,
     message:  { message: 'Too many login attempts. Try again in 15 minutes.' },
     validate: false,
-});
+}) : (req, res, next) => next();
 
 // Auth
 router.post('/register',         auth.register);

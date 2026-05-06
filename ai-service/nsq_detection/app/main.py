@@ -60,9 +60,15 @@ app.add_middleware(
 
 # ── Register Routes ──────────────────────────────────────────────────────────
 from app.routes.antibiotic_matching import router as antibiotic_router
+from app.routes.antibiotic_analysis import router as antibiotic_analysis_router
 from app.routes.nsq_matching import router as nsq_router
+from app.routes.scoring import router as scoring_router
+from app.routes.risk_forecasting import router as risk_forecasting_router
 app.include_router(antibiotic_router)
+app.include_router(antibiotic_analysis_router)
 app.include_router(nsq_router)
+app.include_router(scoring_router)
+app.include_router(risk_forecasting_router)
 
 # ── Root Endpoint ─────────────────────────────────────────────────────────────
 @app.get("/", tags=["Root"])
@@ -75,4 +81,5 @@ async def root():
         "health"     : "/api/nsq/health",
         "main_endpoint": "POST /api/nsq/validate-nsq",
         "antibiotic_endpoint": "POST /api/antibiotic/match-sales",
+        "scoring_endpoint": "POST /api/scoring/candidates",
     }

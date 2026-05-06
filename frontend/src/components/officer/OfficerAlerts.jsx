@@ -108,6 +108,12 @@ const OfficerAlerts = () => {
                                                 </Button>
                                             ))}
                                         </Box>
+                                        <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 1.5, mb: 2 }}>
+                                            <Typography sx={{ fontSize: '0.85rem', color: '#374151' }}><strong>Matched NSQ:</strong> {a.nsqDrugName || '-'}</Typography>
+                                            <Typography sx={{ fontSize: '0.85rem', color: '#374151' }}><strong>NSQ Manufacturer:</strong> {a.nsqManufacturer || '-'}</Typography>
+                                            <Typography sx={{ fontSize: '0.85rem', color: '#374151' }}><strong>Ban Date:</strong> {a.banDate ? new Date(a.banDate).toLocaleDateString() : '-'}</Typography>
+                                            <Typography sx={{ fontSize: '0.85rem', color: '#374151' }}><strong>Similarity:</strong> {typeof a.similarityScore === 'number' ? a.similarityScore.toFixed(2) : '-'}</Typography>
+                                        </Box>
                                         <TextField label="Officer Notes" value={notes} onChange={e => setNotes(e.target.value)}
                                             fullWidth multiline rows={2} size="small"
                                             placeholder="Describe investigation steps taken…"
